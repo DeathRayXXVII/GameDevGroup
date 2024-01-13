@@ -230,6 +230,7 @@ Transform:
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &139238016
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,6 +482,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 161237354}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> d4e6540a1d0a48d93218cf05b02fa65e17731c91
 =======
 >>>>>>> d4e6540a1d0a48d93218cf05b02fa65e17731c91
 --- !u!1 &463398006
@@ -863,6 +866,7 @@ MonoBehaviour:
   maxZoom: 15
   yawSpeed: 100
   currentInput: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!1 &1052057148
 GameObject:
@@ -1598,6 +1602,8 @@ Transform:
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 =======
+=======
+>>>>>>> d4e6540a1d0a48d93218cf05b02fa65e17731c91
 --- !u!1001 &1919109000
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1687,6 +1693,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8437e03971df63f4b8e75d2d85631bfd, type: 3}
+<<<<<<< HEAD
+>>>>>>> d4e6540a1d0a48d93218cf05b02fa65e17731c91
+=======
 >>>>>>> d4e6540a1d0a48d93218cf05b02fa65e17731c91
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -1697,10 +1706,14 @@ SceneRoots:
   - {fileID: 98549699}
   - {fileID: 463398011}
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 1052057152}
   - {fileID: 1411561410}
   - {fileID: 2134578886}
   - {fileID: 1522861631}
+=======
+  - {fileID: 1919109000}
+>>>>>>> d4e6540a1d0a48d93218cf05b02fa65e17731c91
 =======
   - {fileID: 1919109000}
 >>>>>>> d4e6540a1d0a48d93218cf05b02fa65e17731c91
