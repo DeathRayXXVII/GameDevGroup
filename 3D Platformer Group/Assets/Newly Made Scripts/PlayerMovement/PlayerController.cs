@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(CharacterController))]
-public class Example : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     //These InputActionReference's are used to gather movement from the GAMEPAD, rather than like a Input.GetButtonDown.
     [SerializeField] 
@@ -21,7 +21,7 @@ public class Example : MonoBehaviour
 
 
     private CharacterController controller;
-    private Vector3 playerVelocity;
+    public Vector3 playerVelocity;
     private bool groundedPlayer;
     private bool hasDoubleJumped = false;
     private Transform cameraMainTransform;
