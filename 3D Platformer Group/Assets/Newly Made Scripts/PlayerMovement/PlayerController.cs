@@ -19,7 +19,7 @@ public class Example : MonoBehaviour
     [SerializeField] 
     private float rotationSpeed = 4f;
 
-
+    private Animator animator;
     private CharacterController controller;
     private Vector3 playerVelocity;
     private bool groundedPlayer;
@@ -41,6 +41,7 @@ public class Example : MonoBehaviour
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
         controller = gameObject.GetComponent<CharacterController>();
         cameraMainTransform = Camera.main.transform;
     }
@@ -82,9 +83,14 @@ public class Example : MonoBehaviour
         // Makes the character move in the direction of the camera
         if (movement != Vector2.zero)
         {
+            animator.SetBool("Walk", true);
             float targetAngle = Mathf.Atan2(movement.x, movement.y) * Mathf.Rad2Deg + cameraMainTransform.eulerAngles.y;
             Quaternion rotation = Quaternion.Euler(0f, targetAngle, 0f);
             transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * rotationSpeed);
+        }
+        else
+        {
+            animator.SetBool("Walk", false);
         }
     }
 }
