@@ -2083,6 +2083,9 @@ Transform:
 --- !u!64 &128757211
 MeshCollider:
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ColbyCordner/master
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2105,6 +2108,7 @@ MeshCollider:
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &142381834
 GameObject:
+<<<<<<< HEAD
 =======
 >>>>>>> efd0d81d222c5f04d2772644c04e7c4e194d4319
   m_ObjectHideFlags: 0
@@ -2129,6 +2133,8 @@ GameObject:
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &142381834
 GameObject:
+=======
+>>>>>>> ColbyCordner/master
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2211,6 +2217,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!1001 &146404041
 PrefabInstance:
@@ -2298,6 +2305,8 @@ PrefabInstance:
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb2011c99dde1ff4482e932ec1305065, type: 3}
 =======
+=======
+>>>>>>> ColbyCordner/master
 --- !u!64 &142381839
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2320,7 +2329,10 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD
 >>>>>>> efd0d81d222c5f04d2772644c04e7c4e194d4319
+=======
+>>>>>>> ColbyCordner/master
 --- !u!1 &168548186
 GameObject:
   m_ObjectHideFlags: 0
@@ -7759,6 +7771,7 @@ Transform:
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 142.437, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &775650560
 GameObject:
   m_ObjectHideFlags: 3
@@ -7905,6 +7918,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 =======
+=======
+>>>>>>> ColbyCordner/master
 --- !u!1 &782346022 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a275de0531a770a41be45db7d37db0d6, type: 3}
@@ -7981,7 +7996,10 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a275de0531a770a41be45db7d37db0d6, type: 3}
   m_PrefabInstance: {fileID: 1681384157}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 >>>>>>> efd0d81d222c5f04d2772644c04e7c4e194d4319
+=======
+>>>>>>> ColbyCordner/master
 --- !u!1 &782588027
 GameObject:
   m_ObjectHideFlags: 0
@@ -8934,10 +8952,14 @@ Transform:
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 142.437, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &871832507
 =======
 --- !u!1 &866437957
 >>>>>>> efd0d81d222c5f04d2772644c04e7c4e194d4319
+=======
+--- !u!1 &866437957
+>>>>>>> ColbyCordner/master
 GameObject:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8946,11 +8968,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - component: {fileID: 871832509}
   - component: {fileID: 871832508}
   m_Layer: 0
   m_Name: TopRig
 =======
+=======
+>>>>>>> ColbyCordner/master
   - component: {fileID: 866437958}
   - component: {fileID: 866437962}
   - component: {fileID: 866437961}
@@ -8958,12 +8983,16 @@ GameObject:
   - component: {fileID: 866437959}
   m_Layer: 0
   m_Name: cm
+<<<<<<< HEAD
 >>>>>>> efd0d81d222c5f04d2772644c04e7c4e194d4319
+=======
+>>>>>>> ColbyCordner/master
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!114 &871832508
 MonoBehaviour:
@@ -9015,11 +9044,15 @@ MonoBehaviour:
 =======
 --- !u!4 &866437958
 >>>>>>> efd0d81d222c5f04d2772644c04e7c4e194d4319
+=======
+--- !u!4 &866437958
+>>>>>>> ColbyCordner/master
 Transform:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_GameObject: {fileID: 871832507}
   serializedVersion: 2
@@ -9032,6 +9065,8 @@ Transform:
   m_Father: {fileID: 1056384907}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 =======
+=======
+>>>>>>> ColbyCordner/master
   m_GameObject: {fileID: 866437957}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
@@ -9151,7 +9186,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 >>>>>>> efd0d81d222c5f04d2772644c04e7c4e194d4319
+=======
+>>>>>>> ColbyCordner/master
 --- !u!1 &877734043
 GameObject:
   m_ObjectHideFlags: 0
@@ -16478,6 +16516,7 @@ Transform:
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 142.437, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &1584492075
 GameObject:
   m_ObjectHideFlags: 0
@@ -16597,6 +16636,8 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 =======
 >>>>>>> efd0d81d222c5f04d2772644c04e7c4e194d4319
+=======
+>>>>>>> ColbyCordner/master
 --- !u!1 &1591101825
 GameObject:
   m_ObjectHideFlags: 0
@@ -21958,6 +21999,7 @@ SceneRoots:
   - {fileID: 1681384157}
   - {fileID: 1999559208}
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 1029608848}
   - {fileID: 1524766924}
   - {fileID: 453268465}
@@ -21972,6 +22014,8 @@ SceneRoots:
   - {fileID: 195274507}
 =======
 >>>>>>> efd0d81d222c5f04d2772644c04e7c4e194d4319
+=======
+>>>>>>> ColbyCordner/master
   - {fileID: 98594167}
   - {fileID: 506178131}
   - {fileID: 759223936}
