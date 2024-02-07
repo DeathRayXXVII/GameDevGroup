@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(CharacterController))]
-public class Example : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     //These InputActionReference's are used to gather movement from the GAMEPAD, rather than like a Input.GetButtonDown.
     [SerializeField] 
@@ -19,9 +19,9 @@ public class Example : MonoBehaviour
     [SerializeField] 
     private float rotationSpeed = 4f;
 
-
+    private Animator animator;
     private CharacterController controller;
-    private Vector3 playerVelocity;
+    public Vector3 playerVelocity;
     private bool groundedPlayer;
     private bool hasDoubleJumped = false;
     private Transform cameraMainTransform;
@@ -41,6 +41,7 @@ public class Example : MonoBehaviour
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
         controller = gameObject.GetComponent<CharacterController>();
         cameraMainTransform = Camera.main.transform;
     }
@@ -82,9 +83,15 @@ public class Example : MonoBehaviour
         // Makes the character move in the direction of the camera
         if (movement != Vector2.zero)
         {
+            animator.SetBool("IsWalking", true);
+        
             float targetAngle = Mathf.Atan2(movement.x, movement.y) * Mathf.Rad2Deg + cameraMainTransform.eulerAngles.y;
             Quaternion rotation = Quaternion.Euler(0f, targetAngle, 0f);
             transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * rotationSpeed);
+        }
+        else
+        {
+            animator.SetBool("IsWalking", false);
         }
     }
 }
