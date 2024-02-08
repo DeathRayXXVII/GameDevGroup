@@ -8286,9 +8286,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 891d952ceea95eb47824399fa8d132b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementControl: {fileID: 2537364880715787937, guid: 072c1f6dd22415b4395fbfefdf272cea, type: 3}
-  jumpControl: {fileID: -8658634496726135397, guid: 072c1f6dd22415b4395fbfefdf272cea, type: 3}
+  movementControl: {fileID: 7766487774202222703, guid: 8c811aabd354f4d25ac2f9ed970bae0f, type: 3}
+  jumpControl: {fileID: -1628385083307457143, guid: 8c811aabd354f4d25ac2f9ed970bae0f, type: 3}
   playerSpeed: 8
+  minSpeed: 0
   jumpHeight: 2
   gravityValue: -45
   rotationSpeed: 10
@@ -10443,7 +10444,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 972792256}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.15383548, y: -0.000000017001565, z: 0.0000000026469518, w: 0.9880965}
+  m_LocalRotation: {x: 0.15383548, y: 0.000000017001565, z: -0.0000000026469518, w: 0.9880965}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -22083,7 +22084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerIndex: -1
   AutoEnableInputs: 1
-  XYAxis: {fileID: -150081627954301629, guid: 072c1f6dd22415b4395fbfefdf272cea, type: 3}
+  XYAxis: {fileID: 1453456553498104136, guid: 8c811aabd354f4d25ac2f9ed970bae0f, type: 3}
   ZAxis: {fileID: 0}
 --- !u!114 &1965029708
 MonoBehaviour:
