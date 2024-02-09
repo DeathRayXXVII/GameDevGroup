@@ -5,23 +5,27 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     //These InputActionReference's are used to gather movement from the GAMEPAD, rather than like a Input.GetButtonDown.
+    [Header("Input System Controls")]
     [SerializeField] 
     private InputActionReference movementControl;
     [SerializeField] 
     private InputActionReference jumpControl;
     
+    [Header("Player Stats")]
     [SerializeField]
     private float playerSpeed = 2.0f;
+    [SerializeField]
+    private float minSpeed = 1.0f;
     [SerializeField]
     private float jumpHeight = 1.0f;
     [SerializeField]
     private float gravityValue = -9.81f;
     [SerializeField] 
     private float rotationSpeed = 4f;
-
+    public Vector3 playerVelocity;
+    
     private Animator animator;
     private CharacterController controller;
-    public Vector3 playerVelocity;
     private bool groundedPlayer;
     private bool hasDoubleJumped = false;
     private Transform cameraMainTransform;
@@ -46,7 +50,7 @@ public class PlayerController : MonoBehaviour
         cameraMainTransform = Camera.main.transform;
     }
 
-    void Update()
+    private void Update()
     {
         // Info to allow Jump
         groundedPlayer = controller.isGrounded;
@@ -57,12 +61,18 @@ public class PlayerController : MonoBehaviour
         }
 
         // Basic Movement
-        Vector2 movement = movementControl.action.ReadValue<Vector2>();
-        Vector3 move = new Vector3(movement.x, 0, movement.y);
+        Vector2 movement = movementControl.action.ReadValue<Vector2>(); 
+        Vector3 move = new Vector3(movement.x, 0, movement.y); 
+        float inputMagnitude = Mathf.Clamp01(move.magnitude);
+    
+        animator.SetFloat("Input Magnitude", inputMagnitude, 0.5f, Time.deltaTime);
+        float speed = Mathf.Lerp(minSpeed, playerSpeed, inputMagnitude);
+        move.Normalize();
+    
         move = cameraMainTransform.forward * move.z + cameraMainTransform.right * move.x;
         move.y = 0f;
 
-        controller.Move(move * Time.deltaTime * playerSpeed);
+        controller.Move( speed * Time.deltaTime * move);
 
         // Jump
         if (jumpControl.action.triggered)
@@ -83,15 +93,9 @@ public class PlayerController : MonoBehaviour
         // Makes the character move in the direction of the camera
         if (movement != Vector2.zero)
         {
-            animator.SetBool("IsWalking", true);
-        
             float targetAngle = Mathf.Atan2(movement.x, movement.y) * Mathf.Rad2Deg + cameraMainTransform.eulerAngles.y;
             Quaternion rotation = Quaternion.Euler(0f, targetAngle, 0f);
             transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * rotationSpeed);
-        }
-        else
-        {
-            animator.SetBool("IsWalking", false);
         }
     }
 }
