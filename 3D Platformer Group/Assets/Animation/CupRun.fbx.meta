@@ -16,7 +16,8 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
     motionNodeName: 
-    rigImportErrors: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'LeftUpperArm' not found\n"
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -33,7 +34,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Walk
+      name: Run
       takeName: Take 001
       internalID: 1827226128182048838
       firstFrame: 0
@@ -111,7 +112,477 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: CupRun(Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:Geo
+      parentName: CupRun(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:Cup
+      parentName: CupsyBaseRig:Geo
+      position: {x: -0.0061108014, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:Eyes
+      parentName: CupsyBaseRig:Cup
+      position: {x: -0.026758222, y: 0.07238175, z: 0.0010833227}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:R_NormalEye
+      parentName: CupsyBaseRig:Eyes
+      position: {x: 0.045864247, y: -0.0031540035, z: 0.036940105}
+      rotation: {x: 0.015316767, y: 0.83039385, z: 0.00012738592, w: 0.55696625}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:L_NormalEye
+      parentName: CupsyBaseRig:Eyes
+      position: {x: 0.021081364, y: -0.0027663636, z: 0.037763875}
+      rotation: {x: -0.0004904472, y: 0.578997, z: 0.011941914, w: 0.81524205}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:L_Leg
+      parentName: CupsyBaseRig:Cup
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:R_Leg
+      parentName: CupsyBaseRig:Cup
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:Skeleton
+      parentName: CupRun(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:ROOT
+      parentName: CupsyBaseRig:Skeleton
+      position: {x: 0.00042154486, y: 0.032071743, z: 0.0009618288}
+      rotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:IK_Base_JNT
+      parentName: CupsyBaseRig:ROOT
+      position: {x: -0, y: 0.006813756, z: 0}
+      rotation: {x: -0.4820922, y: 0.47228682, z: -0.529597, w: 0.5138671}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:IK_Spine_JNT
+      parentName: CupsyBaseRig:IK_Base_JNT
+      position: {x: -0.035185225, y: -2.1610307e-17, z: -2.688059e-16}
+      rotation: {x: -0.0014203428, y: 0.000024799077, z: -0.000010550307, w: 0.999999}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:IK_Head_JNT
+      parentName: CupsyBaseRig:IK_Spine_JNT
+      position: {x: -0.03266556, y: 9.992007e-18, z: -6.34426e-19}
+      rotation: {x: -0.70466274, y: -0.058681317, z: 0.05925339, w: 0.7046247}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:Base_JNT
+      parentName: CupsyBaseRig:ROOT
+      position: {x: -0.0000070431906, y: 0.0054840804, z: 0.000022800767}
+      rotation: {x: -0.44440857, y: 0.5077207, z: -0.4968833, w: 0.54573584}
+      scale: {x: 1.0000004, y: 1.0000005, z: 1.0000005}
+    - name: CupsyBaseRig:Spine_JNT
+      parentName: CupsyBaseRig:Base_JNT
+      position: {x: -0.036735408, y: 0.0015437276, z: -0.00006847152}
+      rotation: {x: -0.00032363832, y: 0.012681767, z: 0.13725843, w: -0.9904541}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: CupsyBaseRig:R_TiredEye_JNT
+      parentName: CupsyBaseRig:Spine_JNT
+      position: {x: -0.01746078, y: 0.029706577, z: -0.015169665}
+      rotation: {x: 0.8544963, y: -0.5175168, z: 0.026904557, w: 0.03589757}
+      scale: {x: 1, y: 0.87183684, z: 1}
+    - name: CupsyBaseRig:R_Brow1_JNT
+      parentName: CupsyBaseRig:R_TiredEye_JNT
+      position: {x: 0.00067274563, y: 0.006098641, z: 0.009653317}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 0.87183684, z: 1}
+    - name: CupsyBaseRig:R_Brow2_JNT
+      parentName: CupsyBaseRig:R_Brow1_JNT
+      position: {x: -0.00954278, y: 0, z: -1.7763568e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 0.87183684, z: 1}
+    - name: CupsyBaseRig:R_Brow3_JNT
+      parentName: CupsyBaseRig:R_Brow2_JNT
+      position: {x: -0.009542781, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 0.87183684, z: 1}
+    - name: CupsyBaseRig:R_Eyebag_JNT
+      parentName: CupsyBaseRig:R_TiredEye_JNT
+      position: {x: -0.00085991353, y: -0.017739339, z: -0.00047911072}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1.0394429, z: 1}
+    - name: CupsyBaseRig:L_TiredEye_JNT
+      parentName: CupsyBaseRig:Spine_JNT
+      position: {x: -0.017477466, y: 0.031892546, z: 0.008516948}
+      rotation: {x: 0.8544963, y: -0.5175168, z: 0.026904557, w: 0.03589757}
+      scale: {x: 1, y: 0.87183684, z: 1}
+    - name: CupsyBaseRig:L_Brow1_JNT
+      parentName: CupsyBaseRig:L_TiredEye_JNT
+      position: {x: 0.00067274563, y: 0.0060986457, z: -0.009432245}
+      rotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 0.87183684, z: 1}
+    - name: CupsyBaseRig:L_Brow2_JNT
+      parentName: CupsyBaseRig:L_Brow1_JNT
+      position: {x: -0.009542782, y: -1.7763568e-17, z: -8.881784e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 0.87183684, z: 1}
+    - name: CupsyBaseRig:L_Brow3_JNT
+      parentName: CupsyBaseRig:L_Brow2_JNT
+      position: {x: -0.009542782, y: 3.5527136e-17, z: 1.7763568e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 0.87183684, z: 1}
+    - name: CupsyBaseRig:L_Eyebag_JNT
+      parentName: CupsyBaseRig:L_TiredEye_JNT
+      position: {x: -0.0009978379, y: -0.017748922, z: 0.00005144331}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1.0394429, z: 1}
+    - name: CupsyBaseRig:R_NormalEye_JNT
+      parentName: CupsyBaseRig:Spine_JNT
+      position: {x: -0.002902262, y: 0.034184106, z: -0.015782055}
+      rotation: {x: 0.7619467, y: -0.6460842, z: 0.032240797, w: 0.03119328}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:L_NormalEye_JNT
+      parentName: CupsyBaseRig:Spine_JNT
+      position: {x: -0.0037493345, y: 0.036995634, z: 0.008352505}
+      rotation: {x: 0.7619467, y: -0.6460842, z: 0.032240797, w: 0.03119328}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:Head_JNT
+      parentName: CupsyBaseRig:Spine_JNT
+      position: {x: -0.03626843, y: -0.0014021202, z: -0.000017335742}
+      rotation: {x: -0.7046628, y: -0.05868133, z: 0.05925339, w: 0.7046247}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: CupsyBaseRig:Middle_Handle_JNT
+      parentName: CupsyBaseRig:Spine_JNT
+      position: {x: 0.0048344387, y: -0.007879597, z: 0.05654806}
+      rotation: {x: -0.56157535, y: 0.47890747, z: 0.51598, w: 0.43479347}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000005}
+    - name: CupsyBaseRig:L_Hip_JNT
+      parentName: CupsyBaseRig:ROOT
+      position: {x: -0.016981976, y: 0.003270465, z: -0.01232163}
+      rotation: {x: -0.014909834, y: 0.0072513213, z: 0.70645857, w: 0.70756024}
+      scale: {x: 1.0000001, y: 1, z: 1.0000002}
+    - name: CupsyBaseRig:L_Knee_JNT
+      parentName: CupsyBaseRig:L_Hip_JNT
+      position: {x: -0.015711762, y: 0.000004012679, z: -0.00041153262}
+      rotation: {x: -0.000016262753, y: -0.03179237, z: -0.00012769754, w: 0.9994945}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1.0000004}
+    - name: CupsyBaseRig:L_Ankle_JNT
+      parentName: CupsyBaseRig:L_Knee_JNT
+      position: {x: -0.012347691, y: -1.8451898e-11, z: 0.0004624773}
+      rotation: {x: 0.5108823, y: -0.3941585, z: -0.29861307, w: 0.70318466}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1}
+    - name: CupsyBaseRig:L_Foot_JNT
+      parentName: CupsyBaseRig:L_Ankle_JNT
+      position: {x: -0.010638233, y: 0.000010330493, z: 0.00016375133}
+      rotation: {x: -0.0060318206, y: -0.22204286, z: 0.00061903516, w: 0.9750181}
+      scale: {x: 0.99999994, y: 1, z: 1.0000004}
+    - name: CupsyBaseRig:L_Toe_JNT
+      parentName: CupsyBaseRig:L_Foot_JNT
+      position: {x: -0.009970457, y: -1.1021732e-18, z: 1.7397407e-18}
+      rotation: {x: -0.70653075, y: -0.028537922, z: -0.04816151, w: 0.70546466}
+      scale: {x: 1, y: 0.99999994, z: 1.0000001}
+    - name: CupsyBaseRig:R_Hip_JNT
+      parentName: CupsyBaseRig:ROOT
+      position: {x: 0.016843311, y: 0.003223533, z: 0.011201497}
+      rotation: {x: -0.024884608, y: 0.009585082, z: 0.7073892, w: 0.7063211}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: CupsyBaseRig:R_Knee_JNT
+      parentName: CupsyBaseRig:R_Hip_JNT
+      position: {x: -0.01570868, y: 0.000016329215, z: -0.0004757913}
+      rotation: {x: -0.000044269484, y: -0.033841692, z: -0.0005197798, w: 0.9994271}
+      scale: {x: 1.0000006, y: 1.0000004, z: 1.0000001}
+    - name: CupsyBaseRig:R_Ankle_JNT
+      parentName: CupsyBaseRig:R_Knee_JNT
+      position: {x: -0.012347691, y: -1.8437677e-11, z: 0.0004624773}
+      rotation: {x: 0.5550406, y: -0.37819156, z: -0.31505394, w: 0.6705537}
+      scale: {x: 1.0000001, y: 1.0000005, z: 1.0000005}
+    - name: CupsyBaseRig:R_Foot_JNT
+      parentName: CupsyBaseRig:R_Ankle_JNT
+      position: {x: -0.010413853, y: -0.00000102129, z: -0.00006519075}
+      rotation: {x: -0.00603198, y: -0.22204292, z: 0.00061881175, w: 0.9750181}
+      scale: {x: 1.0000002, y: 1, z: 0.9999997}
+    - name: CupsyBaseRig:R_Toe_JNT
+      parentName: CupsyBaseRig:R_Foot_JNT
+      position: {x: -0.009970458, y: 7.8905575e-19, z: -1.1438499e-18}
+      rotation: {x: -0.7065307, y: -0.02853791, z: -0.048161343, w: 0.7054648}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:Spine_IK
+      parentName: CupsyBaseRig:Skeleton
+      position: {x: -0.0013265201, y: 0.10495241, z: 0.00047169416}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:Controls
+      parentName: CupRun(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:ROOT_Group
+      parentName: CupsyBaseRig:Controls
+      position: {x: 0.00030263112, y: 0.03965387, z: 0.00092345115}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:ROOT_CTRL
+      parentName: CupsyBaseRig:ROOT_Group
+      position: {x: -0, y: -0.0052268067, z: 0}
+      rotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:Base_Group
+      parentName: CupsyBaseRig:ROOT_CTRL
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:Base_Ctrl
+      parentName: CupsyBaseRig:Base_Group
+      position: {x: -0, y: -4.440892e-18, z: 0}
+      rotation: {x: 0, y: 0, z: 0.05872233, w: 0.9982744}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:Spine_Group
+      parentName: CupsyBaseRig:Base_Ctrl
+      position: {x: 0.00023631197, y: 0.033801436, z: -0.00073221565}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:Spine_CTRL
+      parentName: CupsyBaseRig:Spine_Group
+      position: {x: -0.00033961842, y: 0.0039018698, z: 0}
+      rotation: {x: 0, y: -0, z: -0.08084934, w: 0.99672633}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:Head_Group
+      parentName: CupsyBaseRig:Spine_CTRL
+      position: {x: -0.0018654632, y: 0.031497102, z: 0.0002804586}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:Head_CTRL
+      parentName: CupsyBaseRig:Head_Group
+      position: {x: 0.00011583361, y: 0.003925101, z: 0}
+      rotation: {x: 0, y: -0, z: -0.099845245, w: 0.995003}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:Handle_Group
+      parentName: CupsyBaseRig:Spine_CTRL
+      position: {x: 0.017912054, y: -0.0037393947, z: -0.06808541}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:Handle_CTRL
+      parentName: CupsyBaseRig:Handle_Group
+      position: {x: 0.0005690725, y: 8.881784e-18, z: 0.00085360865}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:Eyes_Group
+      parentName: CupsyBaseRig:Spine_CTRL
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:R_NormalEye_Group
+      parentName: CupsyBaseRig:Eyes_Group
+      position: {x: -0.03219107, y: -0.004866077, z: 0.012870421}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:R_NormalEye_CTRL
+      parentName: CupsyBaseRig:R_NormalEye_Group
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:L_NormalEye_Group
+      parentName: CupsyBaseRig:Eyes_Group
+      position: {x: -0.032835137, y: -0.004866571, z: -0.011092435}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:L_NormalEye_CTRL
+      parentName: CupsyBaseRig:L_NormalEye_Group
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:R_TiredEye_Group
+      parentName: CupsyBaseRig:Eyes_Group
+      position: {x: -0.03219107, y: -0.0019535534, z: 0.012870421}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:R_TiredEye_CTRL
+      parentName: CupsyBaseRig:R_TiredEye_Group
+      position: {x: 0.0024635708, y: 0.014149386, z: 0}
+      rotation: {x: 0, y: -0, z: -0.15807445, w: 0.98742723}
+      scale: {x: 1, y: 0.87183684, z: 1}
+    - name: CupsyBaseRig:L_Brow1_Group
+      parentName: CupsyBaseRig:R_TiredEye_CTRL
+      position: {x: -0.0000052264204, y: 0.005245628, z: 0.009545901}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:L_Brow1_CTRL
+      parentName: CupsyBaseRig:L_Brow1_Group
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:L_Brow2_Group
+      parentName: CupsyBaseRig:L_Brow1_CTRL
+      position: {x: 1.3322676e-17, y: 0, z: -0.00954278}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:L_Brow2_CTRL
+      parentName: CupsyBaseRig:L_Brow2_Group
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:L_Brow3_Group
+      parentName: CupsyBaseRig:L_Brow2_CTRL
+      position: {x: -1.3322676e-17, y: 0, z: -0.009542781}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:L_Brow3_CTRL
+      parentName: CupsyBaseRig:L_Brow3_Group
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:R_Eyebag_Group
+      parentName: CupsyBaseRig:R_TiredEye_CTRL
+      position: {x: 0.0013541222, y: -0.017396003, z: -0.00061461446}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:R_Eyebag_CTRL
+      parentName: CupsyBaseRig:R_Eyebag_Group
+      position: {x: -0.0028904767, y: -0.0023313914, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1.1922448, z: 1}
+    - name: CupsyBaseRig:L_TiredEye_Group
+      parentName: CupsyBaseRig:Eyes_Group
+      position: {x: -0.032835137, y: -0.001954048, z: -0.011092435}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:L_TiredEye_CTRL
+      parentName: CupsyBaseRig:L_TiredEye_Group
+      position: {x: 0.0024635708, y: 0.014149386, z: 0}
+      rotation: {x: 0, y: -0, z: -0.15807445, w: 0.98742723}
+      scale: {x: 1, y: 0.87183684, z: 1}
+    - name: CupsyBaseRig:R_Brow1_Group
+      parentName: CupsyBaseRig:L_TiredEye_CTRL
+      position: {x: 0.0006388375, y: 0.0052461266, z: -0.009363206}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:R_Brow1_CTRL
+      parentName: CupsyBaseRig:R_Brow1_Group
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:R_Brow2_Group
+      parentName: CupsyBaseRig:R_Brow1_CTRL
+      position: {x: -8.881784e-18, y: 0, z: 0.009542782}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:R_Brow2_CTRL
+      parentName: CupsyBaseRig:R_Brow2_Group
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:R_Brow3_Group
+      parentName: CupsyBaseRig:R_Brow2_CTRL
+      position: {x: 1.7763568e-17, y: -2.6645352e-17, z: 0.009542782}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:R_Brow3_CTRL
+      parentName: CupsyBaseRig:R_Brow3_Group
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:L_Eyebag_Group
+      parentName: CupsyBaseRig:L_TiredEye_CTRL
+      position: {x: 0.001998186, y: -0.01739551, z: 0.00030905433}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:L_Eyebag_CTRL
+      parentName: CupsyBaseRig:L_Eyebag_Group
+      position: {x: -0.0025307215, y: -0.0023312748, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1.1922448, z: 1}
+    - name: CupsyBaseRig:R_Hip_IK_Group
+      parentName: CupsyBaseRig:ROOT_CTRL
+      position: {x: -0.0004570778, y: -0.009072738, z: 0.011354772}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:R_Hip_IK_CTRL
+      parentName: CupsyBaseRig:R_Hip_IK_Group
+      position: {x: 0.017222919, y: -0.000050566294, z: 2.220446e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:R_Knee_PV_Group
+      parentName: CupsyBaseRig:R_Hip_IK_CTRL
+      position: {x: -0.021238964, y: -0.010181999, z: -0.000021057489}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:R_Knee_PV_CTRL
+      parentName: CupsyBaseRig:R_Knee_PV_Group
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:R_Ankle_IK_Group
+      parentName: CupsyBaseRig:R_Knee_PV_CTRL
+      position: {x: 0.021993795, y: -0.014699137, z: -0.000060443253}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:R_Ankle_IK_CTRL
+      parentName: CupsyBaseRig:R_Ankle_IK_Group
+      position: {x: 0.02145197, y: 0.02917552, z: -1.9977204e-17}
+      rotation: {x: 0, y: 0, z: 0.8547763, w: 0.51899654}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:R_Leg_IK
+      parentName: CupsyBaseRig:R_Ankle_IK_CTRL
+      position: {x: -0.00017114244, y: 0.002272369, z: 0.00002949568}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:R_Foot_Group
+      parentName: CupsyBaseRig:R_Ankle_IK_CTRL
+      position: {x: -0.009129833, y: -0.0030158567, z: -0.00044866762}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:R_Foot_CTRL
+      parentName: CupsyBaseRig:R_Foot_Group
+      position: {x: -0, y: 2.220446e-18, z: 0}
+      rotation: {x: 0, y: -0, z: -0.15466614, w: 0.98796684}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:L_Hip_IK_Group
+      parentName: CupsyBaseRig:ROOT_CTRL
+      position: {x: 0.000106652216, y: -0.008975309, z: -0.012168353}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:L_Hip_IK_CTRL
+      parentName: CupsyBaseRig:L_Hip_IK_Group
+      position: {x: -0.0171661, y: -0.0000036319736, z: -2.220446e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:L_Knee_PV_Group
+      parentName: CupsyBaseRig:L_Hip_IK_CTRL
+      position: {x: -0.02179259, y: -0.010278818, z: 0.000010126829}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:L_Knee_PV_CTRL
+      parentName: CupsyBaseRig:L_Knee_PV_Group
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:L_Ankle_IK_Group
+      parentName: CupsyBaseRig:L_Knee_PV_CTRL
+      position: {x: 0.021983692, y: -0.014699746, z: 0.0000055253504}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:L_Ankle_IK_CTRL
+      parentName: CupsyBaseRig:L_Ankle_IK_Group
+      position: {x: -0.020116298, y: 0.005143804, z: 2.220446e-18}
+      rotation: {x: 0, y: -0, z: -0.360146, w: 0.93289596}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:L_Leg_IK
+      parentName: CupsyBaseRig:L_Ankle_IK_CTRL
+      position: {x: -0.00000039434536, y: 0.0023411843, z: -0.000000052148707}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:L_Foot_Group
+      parentName: CupsyBaseRig:L_Ankle_IK_CTRL
+      position: {x: -0.009036043, y: -0.0028978004, z: -0.00036830534}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CupsyBaseRig:L_Foot_CTRL
+      parentName: CupsyBaseRig:L_Foot_Group
+      position: {x: -0.00036437216, y: 0.0026006957, z: -3.5513514e-17}
+      rotation: {x: 0, y: -0, z: -0.1624045, w: 0.98672426}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
