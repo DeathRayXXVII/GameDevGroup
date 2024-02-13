@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     private bool groundedPlayer;
     private bool isJumping;
     private bool isGrounded;
+    [SerializeField]
     private bool hasDoubleJumped = false;
     private Transform cameraMainTransform;
     [SerializeField]
@@ -63,6 +64,7 @@ public class PlayerController : MonoBehaviour
         {
             playerVelocity.y = 0f;
             hasDoubleJumped = false; // Reset double jump when grounded
+            animator.SetBool("DoubleJumped", false);
             animator.SetBool("IsGrounded", true);
             isGrounded = true;
             animator.SetBool("IsJumping", false);
@@ -100,6 +102,7 @@ public class PlayerController : MonoBehaviour
                 if (!groundedPlayer)
                 {
                     hasDoubleJumped = true;
+                    animator.SetBool("DoubleJumped", true);
                 }
                 playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
             }
@@ -108,6 +111,7 @@ public class PlayerController : MonoBehaviour
         if ((isJumping && playerVelocity.y < 0) || playerVelocity.y < -2)
         {
             animator.SetBool("IsFalling", true);
+            animator.SetBool("DoubleJumped", false);
         }
 
         playerVelocity.y += gravityValue * Time.deltaTime;
