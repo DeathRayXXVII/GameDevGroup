@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(CharacterController))]
@@ -27,8 +28,13 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private CharacterController controller;
     private bool groundedPlayer;
+    private bool isJumping;
+    private bool isGrounded;
+    [SerializeField]
     private bool hasDoubleJumped = false;
     private Transform cameraMainTransform;
+    [SerializeField]
+    private UnityEvent jumpEvent;
     
 
     private void OnEnable()
@@ -58,6 +64,18 @@ public class PlayerController : MonoBehaviour
         {
             playerVelocity.y = 0f;
             hasDoubleJumped = false; // Reset double jump when grounded
+            animator.SetBool("DoubleJumped", false);
+            animator.SetBool("IsGrounded", true);
+            isGrounded = true;
+            animator.SetBool("IsJumping", false);
+            isJumping = false;
+            animator.SetBool("IsFalling", false);
+        }
+        else
+        {
+            animator.SetBool("IsGrounded", false);
+            isGrounded = false;
+            
         }
 
         // Basic Movement
@@ -77,14 +95,23 @@ public class PlayerController : MonoBehaviour
         // Jump
         if (jumpControl.action.triggered)
         {
+            animator.SetBool("IsJumping", true);
+            isJumping = true;
             if (groundedPlayer || !hasDoubleJumped)
             {
                 if (!groundedPlayer)
                 {
                     hasDoubleJumped = true;
+                    animator.SetBool("DoubleJumped", true);
                 }
                 playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
             }
+        }
+        
+        if ((isJumping && playerVelocity.y < 0) || playerVelocity.y < -2)
+        {
+            animator.SetBool("IsFalling", true);
+            animator.SetBool("DoubleJumped", false);
         }
 
         playerVelocity.y += gravityValue * Time.deltaTime;
@@ -93,9 +120,14 @@ public class PlayerController : MonoBehaviour
         // Makes the character move in the direction of the camera
         if (movement != Vector2.zero)
         {
+            animator.SetBool("IsWalking", true);
             float targetAngle = Mathf.Atan2(movement.x, movement.y) * Mathf.Rad2Deg + cameraMainTransform.eulerAngles.y;
             Quaternion rotation = Quaternion.Euler(0f, targetAngle, 0f);
             transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * rotationSpeed);
+        }
+        else
+        {
+            animator.SetBool("IsWalking", false);
         }
     }
 }

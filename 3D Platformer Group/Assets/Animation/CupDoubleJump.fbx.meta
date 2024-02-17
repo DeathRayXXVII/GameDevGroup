@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c1f212e5ea936564fae4d81c52622905
+guid: 994b3df87f1c84040b39edf7671f0ec3
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -33,18 +33,18 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Fall
+      name: Double Jump
       takeName: Take 001
       internalID: 1827226128182048838
-      firstFrame: 100
-      lastFrame: 109
+      firstFrame: 156
+      lastFrame: 163
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
