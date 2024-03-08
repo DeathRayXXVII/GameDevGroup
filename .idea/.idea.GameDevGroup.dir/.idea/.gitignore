@@ -3,9 +3,9 @@
 /workspace.xml
 # Rider ignored files
 /contentModel.xml
-/.idea.3D Platformer Group.iml
-/modules.xml
 /projectSettingsUpdater.xml
+/modules.xml
+/.idea.GameDevGroup.iml
 # Editor-based HTTP Client requests
 /httpRequests/
 # Datasource local storage ignored files

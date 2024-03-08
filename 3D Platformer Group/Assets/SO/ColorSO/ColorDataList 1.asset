@@ -17,4 +17,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5f0bb9fb694527248976b4482dc51156, type: 2}
   - {fileID: 11400000, guid: bb6bb488ca63cf540bcd124cacf0151b, type: 2}
   - {fileID: 11400000, guid: dad7fe087f20d0c4f9ba2e6901f892b3, type: 2}
-  currentColor: {fileID: 11400000, guid: dad7fe087f20d0c4f9ba2e6901f892b3, type: 2}
+  - {fileID: 11400000, guid: 7dfd9aeb5df1c1845a881b9ca25347ec, type: 2}
+  - {fileID: 11400000, guid: dfa75203e2d065b45a5897057feecb20, type: 2}
+  - {fileID: 11400000, guid: f1b67eed86b007f40a73a009f90f3dc1, type: 2}
+  - {fileID: 11400000, guid: 341dfcd1ed6499c4bb5f04bcc0a7eead, type: 2}
+  currentColor: {fileID: 11400000, guid: 341dfcd1ed6499c4bb5f04bcc0a7eead, type: 2}

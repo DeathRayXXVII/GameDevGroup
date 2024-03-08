@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: OrangeColorID
   m_EditorClassIdentifier: 
   value: {r: 1, g: 0, b: 0, a: 1}
-  material: {fileID: 2100000, guid: c3f9b560147f1c64bbd69592a23f88b1, type: 2}
+  material: {fileID: 2100000, guid: bcdeebb45e327c747937b98ac4a3208f, type: 2}
