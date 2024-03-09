@@ -64,5 +64,6 @@ crashlytics-build.properties
 
 *.DS_Store
 3D Platformer Group/UserSettings/
+3D Platformer Group/Assets/Plugins/HoudiniEngineUnity/
 
 Basics/001 Conventions and Syntax/.idea/.idea.001 Conventions and Syntax.dir/.idea/
