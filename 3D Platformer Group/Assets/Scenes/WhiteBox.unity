@@ -2532,16 +2532,16 @@ MonoBehaviour:
   firstDelayEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1902742252}
+      - m_Target: {fileID: 1106193303}
         m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: Play
+        m_MethodName: SetTrigger
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: FadeIn
+          m_StringArgument: Start
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 130198471}
@@ -2580,10 +2580,7 @@ MonoBehaviour:
           m_StringArgument: Start
           m_BoolArgument: 0
         m_CallState: 2
-  secondDelayEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1902742252}
+      - m_Target: {fileID: 1106193303}
         m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
         m_MethodName: SetTrigger
         m_Mode: 5
@@ -2592,7 +2589,22 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: FadeOut
+          m_StringArgument: End
+          m_BoolArgument: 0
+        m_CallState: 2
+  secondDelayEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1106193303}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: End
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 782346022}
@@ -8088,7 +8100,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 685245644}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -14443,7 +14455,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
