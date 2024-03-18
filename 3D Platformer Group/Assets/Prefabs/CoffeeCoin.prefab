@@ -221,8 +221,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.24534208, y: 0.2561093, z: 0.04108957}
-  m_Center: {x: 0.0044559804, y: 0.13016737, z: -0.00023235868}
+  m_Size: {x: 0.98078865, y: 1.5498174, z: 0.98906034}
+  m_Center: {x: 0.0018095684, y: 0.3104684, z: 0.0046991818}
 --- !u!114 &6479927742931807927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,7 +262,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 856728019402179368}
         m_TargetAssemblyTypeName: Scripts.DestroyBehavour, Assembly-CSharp
         m_MethodName: Destroy
         m_Mode: 1
