@@ -1,3 +1,4 @@
+using Scripts.Data;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -24,10 +25,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] 
     private float rotationSpeed = 4f;
     public Vector3 playerVelocity;
+    [SerializeField]
+    private vector3Data lastGroundedPosition;
     
     private Animator animator;
     private CharacterController controller;
-    private bool groundedPlayer;
+    public bool groundedPlayer;
     private bool isJumping;
     private bool isGrounded;
     [SerializeField]
@@ -91,6 +94,10 @@ public class PlayerController : MonoBehaviour
         move.y = 0f;
 
         controller.Move( speed * Time.deltaTime * move);
+        if (groundedPlayer)
+        {
+            lastGroundedPosition.value = transform.position;
+        }
 
         // Jump
         if (jumpControl.action.triggered)
