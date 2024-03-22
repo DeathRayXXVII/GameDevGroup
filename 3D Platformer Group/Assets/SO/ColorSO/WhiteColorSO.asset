@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: WhiteColorSO
   m_EditorClassIdentifier: 
   value: {r: 1, g: 0, b: 0, a: 1}
-  material: {fileID: 2100000, guid: 09a2fadc1316efb409fc7c1dd9f3b242, type: 2}
+  material: {fileID: 2100000, guid: 79b125e2d09677040b847cc6ed81e1ff, type: 2}

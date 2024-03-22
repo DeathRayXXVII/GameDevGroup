@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: PurpleColorSo
   m_EditorClassIdentifier: 
   value: {r: 1, g: 0, b: 0, a: 1}
-  material: {fileID: 2100000, guid: 8270215077182a34b98ec6a15371668b, type: 2}
+  material: {fileID: 2100000, guid: b02871d7111020c4b80e75e881a06598, type: 2}
