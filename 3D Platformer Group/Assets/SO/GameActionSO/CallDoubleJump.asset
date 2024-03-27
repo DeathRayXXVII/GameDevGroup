@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0364660d3dbfad04d9f0900d394e3d52, type: 3}
-  m_Name: CallCharacterSkin
+  m_Name: CallDoubleJump
   m_EditorClassIdentifier: 
   spriteObj: {fileID: 0}
   meshObj: {fileID: 7329626981084607061, guid: 5914960cb818d3d4a9594c0d77407807, type: 3}
