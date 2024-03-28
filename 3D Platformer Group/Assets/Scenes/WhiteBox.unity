@@ -319,21 +319,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  triggerExitEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1495364889}
-        m_TargetAssemblyTypeName: ItemPickup, Assembly-CSharp
-        m_MethodName: OnDisable
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   triggerColorEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -583,21 +568,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1495364889}
         m_TargetAssemblyTypeName: ItemPickup, Assembly-CSharp
         m_MethodName: OnEnable
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  triggerExitEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1495364889}
-        m_TargetAssemblyTypeName: ItemPickup, Assembly-CSharp
-        m_MethodName: OnDisable
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -991,7 +961,6 @@ MonoBehaviour:
   secondEvent:
     m_PersistentCalls:
       m_Calls: []
-  inputEnabled: 0
   firstSelectedButton: {fileID: 1342378019}
 --- !u!1 &81098299
 GameObject:
@@ -1227,7 +1196,6 @@ MonoBehaviour:
   secondEvent:
     m_PersistentCalls:
       m_Calls: []
-  inputEnabled: 0
   firstSelectedButton: {fileID: 583887523}
 --- !u!1 &87194936
 GameObject:
@@ -2391,7 +2359,6 @@ MonoBehaviour:
           m_StringArgument: Play
           m_BoolArgument: 0
         m_CallState: 2
-  inputEnabled: 1
   firstSelectedButton: {fileID: 0}
 --- !u!114 &130198469
 MonoBehaviour:
@@ -2742,7 +2709,6 @@ MonoBehaviour:
           m_StringArgument: Play
           m_BoolArgument: 1
         m_CallState: 2
-  inputEnabled: 0
   firstSelectedButton: {fileID: 0}
 --- !u!114 &130198474
 MonoBehaviour:
@@ -3043,10 +3009,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11b978ecdc3bff94ea4fffa91ebcecac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  directionalLight: {fileID: 1623123241}
-  lightData: {fileID: 11400000, guid: 7f5c6e7439dad2b408c41a93fe236637, type: 2}
-  timeOfDay: 8.4
-  timeScale: 0.2
 --- !u!1 &130549679
 GameObject:
   m_ObjectHideFlags: 3
@@ -4419,7 +4381,6 @@ MonoBehaviour:
   secondEvent:
     m_PersistentCalls:
       m_Calls: []
-  inputEnabled: 0
   firstSelectedButton: {fileID: 1085210577}
 --- !u!1 &230283081
 GameObject:
@@ -5309,7 +5270,6 @@ MonoBehaviour:
   secondEvent:
     m_PersistentCalls:
       m_Calls: []
-  inputEnabled: 0
   firstSelectedButton: {fileID: 0}
 --- !u!1 &274844719
 GameObject:
@@ -7709,7 +7669,6 @@ MonoBehaviour:
           m_StringArgument: Play
           m_BoolArgument: 0
         m_CallState: 2
-  inputEnabled: 0
   firstSelectedButton: {fileID: 0}
 --- !u!114 &409812414
 MonoBehaviour:
@@ -7862,7 +7821,6 @@ MonoBehaviour:
           m_StringArgument: Play
           m_BoolArgument: 0
         m_CallState: 2
-  inputEnabled: 0
   firstSelectedButton: {fileID: 0}
 --- !u!114 &409812415
 MonoBehaviour:
@@ -11654,21 +11612,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  triggerExitEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1495364889}
-        m_TargetAssemblyTypeName: ItemPickup, Assembly-CSharp
-        m_MethodName: OnDisable
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   triggerColorEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -12104,7 +12047,6 @@ MonoBehaviour:
   secondEvent:
     m_PersistentCalls:
       m_Calls: []
-  inputEnabled: 0
   firstSelectedButton: {fileID: 730145267}
 --- !u!1 &799379467
 GameObject:
@@ -12193,11 +12135,6 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3b0b80d7069431b4194c325121039b0d, type: 3}
   m_PrefabInstance: {fileID: 1513324065}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &822516762 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7299488954075500222, guid: 5914960cb818d3d4a9594c0d77407807, type: 3}
-  m_PrefabInstance: {fileID: 3103336941104102400}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &829983090
 GameObject:
@@ -12657,21 +12594,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1495364889}
         m_TargetAssemblyTypeName: ItemPickup, Assembly-CSharp
         m_MethodName: OnEnable
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  triggerExitEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1495364889}
-        m_TargetAssemblyTypeName: ItemPickup, Assembly-CSharp
-        m_MethodName: OnDisable
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15368,21 +15290,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  triggerExitEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1495364889}
-        m_TargetAssemblyTypeName: ItemPickup, Assembly-CSharp
-        m_MethodName: OnDisable
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   triggerColorEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -16865,6 +16772,79 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1085210577}
   m_CullTransparentMesh: 1
+--- !u!1001 &1092993703
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: a1d75c9d4ce319f4cbfce79180a5f0e8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 409.27695
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a1d75c9d4ce319f4cbfce79180a5f0e8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 409.27695
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a1d75c9d4ce319f4cbfce79180a5f0e8, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 409.27695
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a1d75c9d4ce319f4cbfce79180a5f0e8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 47.9
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a1d75c9d4ce319f4cbfce79180a5f0e8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 153.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a1d75c9d4ce319f4cbfce79180a5f0e8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -136.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a1d75c9d4ce319f4cbfce79180a5f0e8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a1d75c9d4ce319f4cbfce79180a5f0e8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a1d75c9d4ce319f4cbfce79180a5f0e8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a1d75c9d4ce319f4cbfce79180a5f0e8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a1d75c9d4ce319f4cbfce79180a5f0e8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a1d75c9d4ce319f4cbfce79180a5f0e8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a1d75c9d4ce319f4cbfce79180a5f0e8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a1d75c9d4ce319f4cbfce79180a5f0e8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d45f228ae43821c448b809538ed54a16, type: 2}
+    - target: {fileID: 919132149155446097, guid: a1d75c9d4ce319f4cbfce79180a5f0e8, type: 3}
+      propertyPath: m_Name
+      value: SquareCreate2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a1d75c9d4ce319f4cbfce79180a5f0e8, type: 3}
 --- !u!1 &1100771519
 GameObject:
   m_ObjectHideFlags: 0
@@ -18170,9 +18150,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  triggerExitEvent:
-    m_PersistentCalls:
-      m_Calls: []
   triggerColorEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -20110,21 +20087,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  triggerExitEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1495364889}
-        m_TargetAssemblyTypeName: ItemPickup, Assembly-CSharp
-        m_MethodName: OnDisable
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   triggerColorEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -22011,11 +21973,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6d4c0d43a705c34ca0a3f154a00793b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: {fileID: -6600243214571281409, guid: 8c811aabd354f4d25ac2f9ed970bae0f, type: 3}
-  hand: {fileID: 822516762}
-  inputEnabled: 0
-  pickupRange: 5
-  pickupForce: 150
 --- !u!4 &1498025813 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8691104896036722283, guid: e44f95c9103537d4395f29b41b7bbfc3, type: 3}
@@ -23611,21 +23568,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  triggerExitEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1495364889}
-        m_TargetAssemblyTypeName: ItemPickup, Assembly-CSharp
-        m_MethodName: OnDisable
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   triggerColorEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -23713,21 +23655,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1495364889}
         m_TargetAssemblyTypeName: ItemPickup, Assembly-CSharp
         m_MethodName: OnEnable
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  triggerExitEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1495364889}
-        m_TargetAssemblyTypeName: ItemPickup, Assembly-CSharp
-        m_MethodName: OnDisable
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25844,21 +25771,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  triggerExitEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 130198473}
-        m_TargetAssemblyTypeName: InputEvent, Assembly-CSharp
-        m_MethodName: OnDisable
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   triggerColorEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -26513,7 +26425,6 @@ MonoBehaviour:
   secondEvent:
     m_PersistentCalls:
       m_Calls: []
-  inputEnabled: 0
   firstSelectedButton: {fileID: 981528143}
 --- !u!114 &1805781961
 MonoBehaviour:
@@ -26527,8 +26438,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba59d1dc0862227488b60a84b681673f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: ee6c06147efc6e144a2612c90e15227e, type: 2}
-  resolutionDropdown: {fileID: 786820386}
 --- !u!1 &1816593715
 GameObject:
   m_ObjectHideFlags: 0
@@ -31744,3 +31653,4 @@ SceneRoots:
   - {fileID: 2424708238890160482}
   - {fileID: 1165428569}
   - {fileID: 1400095210}
+  - {fileID: 1092993703}
