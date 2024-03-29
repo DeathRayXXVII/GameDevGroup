@@ -2439,7 +2439,7 @@ MonoBehaviour:
           m_StringArgument: Play
           m_BoolArgument: 0
         m_CallState: 2
-  inputEnabled: 0
+  inputEnabled: 1
   firstSelectedButton: {fileID: 0}
 --- !u!114 &130198469
 MonoBehaviour:
@@ -2790,7 +2790,7 @@ MonoBehaviour:
           m_StringArgument: Play
           m_BoolArgument: 1
         m_CallState: 2
-  inputEnabled: 1
+  inputEnabled: 0
   firstSelectedButton: {fileID: 0}
 --- !u!114 &130198474
 MonoBehaviour:
@@ -3086,7 +3086,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 130198467}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11b978ecdc3bff94ea4fffa91ebcecac, type: 3}
   m_Name: 
@@ -3094,7 +3094,7 @@ MonoBehaviour:
   directionalLight: {fileID: 1623123241}
   lightData: {fileID: 11400000, guid: 7f5c6e7439dad2b408c41a93fe236637, type: 2}
   timeOfDay: 7.55
-  timeScale: 0.5
+  timeScale: 0.3
 --- !u!1 &130549679
 GameObject:
   m_ObjectHideFlags: 3
