@@ -6,7 +6,6 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
-    //These InputActionReference's are used to gather movement from the GAMEPAD, rather than like a Input.GetButtonDown.
     [Header("Input System Controls")]
     [SerializeField] 
     private InputActionReference movementControl;
@@ -33,8 +32,9 @@ public class PlayerController : MonoBehaviour
     public bool groundedPlayer;
     private bool isJumping;
     private bool isGrounded;
-    [SerializeField]
     private bool hasDoubleJumped = false;
+    private bool doubleJumpedPurchessed = false;
+    public  InventoryItem item;
     private Transform cameraMainTransform;
     [SerializeField]
     private UnityEvent jumpEvent;
@@ -54,6 +54,10 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        if (item.UsedOrPurchase)
+        {
+            doubleJumpedPurchessed = true;
+        }
         animator = GetComponent<Animator>();
         controller = gameObject.GetComponent<CharacterController>();
         cameraMainTransform = Camera.main.transform;
@@ -104,7 +108,11 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("IsJumping", true);
             isJumping = true;
-            if (groundedPlayer || !hasDoubleJumped)
+            if (item.UsedOrPurchase)
+            {
+                doubleJumpedPurchessed = true;
+            }
+            if (groundedPlayer || !hasDoubleJumped && doubleJumpedPurchessed)
             {
                 if (!groundedPlayer)
                 {
@@ -136,6 +144,11 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("IsWalking", false);
         }
+    }
+    
+    public void DoubleJumpControl()
+    {
+        doubleJumpedPurchessed = true;
     }
 }
 
