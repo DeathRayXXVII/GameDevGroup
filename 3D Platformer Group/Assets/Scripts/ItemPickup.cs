@@ -9,6 +9,7 @@ public class ItemPickup : MonoBehaviour
     private Transform hand;
     private GameObject item;
     private Rigidbody itemRb;
+    [SerializeField]
     private bool inputTriggered;
     [SerializeField]
     private bool inputEnabled;
@@ -39,6 +40,7 @@ public class ItemPickup : MonoBehaviour
             inputTriggered = !inputTriggered;
             if (inputTriggered)
             {
+                Debug.Log("Input Triggered");
                 if (item == null)
                 {
                     if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out var hit, pickupRange))
@@ -49,6 +51,7 @@ public class ItemPickup : MonoBehaviour
             }
             else
             {
+                Debug.Log("Input Released");
                 if (item != null)
                 {
                     DropObject();
@@ -94,7 +97,6 @@ public class ItemPickup : MonoBehaviour
         itemRb.transform.parent = null;
         item = null;
         itemRb = null;
-        
     }
     
     public void OnEnable()
@@ -104,6 +106,7 @@ public class ItemPickup : MonoBehaviour
             return;
         }
         input.action.Enable();
+        inputEnabled = true;
     }
     
     public void OnDisable()
@@ -113,5 +116,6 @@ public class ItemPickup : MonoBehaviour
             return;
         }
         input.action.Disable();
+        inputEnabled = false;
     }
 }
