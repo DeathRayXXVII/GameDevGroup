@@ -265,7 +265,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 65, y: -110}
+  m_AnchoredPosition: {x: 65, y: -74}
   m_SizeDelta: {x: 88.5044, y: 24.056}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1403833564
@@ -356,7 +356,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9132670644878123604
 CanvasRenderer:
@@ -452,10 +452,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b66719d810fa435e9ec90323f3915cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  catagory: 
+  catagory: Upgrades
   gameActionSpriteObj: {fileID: 0}
-  gameActionMaterialObj: {fileID: 11400000, guid: 18d67a68f04115347a0d8a3510ee1c20, type: 2}
-  gameActionItemDropObj: {fileID: 0}
+  gameActionMaterialObj: {fileID: 0}
+  gameActionItemDropObj: {fileID: 11400000, guid: 18d67a68f04115347a0d8a3510ee1c20, type: 2}
   ballMaterialObj: {fileID: 0}
   spriteRaiseEvent:
     m_PersistentCalls:
@@ -477,6 +477,18 @@ MonoBehaviour:
       - m_Target: {fileID: 11400000, guid: 4303feae9cc784fe5a9760630879365b, type: 2}
         m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
         m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8886373065412349981, guid: 5914960cb818d3d4a9594c0d77407807, type: 3}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: DoubleJumpControl
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
