@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 8428650637868617801}
   - component: {fileID: 6479927742931807927}
   - component: {fileID: 856728019402179368}
-  - component: {fileID: 5859202024815802906}
+  - component: {fileID: 8022177457634594298}
   m_Layer: 7
   m_Name: CoffeeCoin
   m_TagString: Untagged
@@ -275,6 +275,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  triggerExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
   triggerColorEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -305,24 +308,17 @@ MonoBehaviour:
   seconds: 0
   destroyOnStart: 0
   destroyParticle: 0
---- !u!95 &5859202024815802906
-Animator:
-  serializedVersion: 5
+--- !u!114 &8022177457634594298
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8981718649943965736}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 450329a09f488fb42a8f1915a7a6f883, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05bb5fb1c3e33164ebda8683671e28ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 150
+  obj: {fileID: 0}
