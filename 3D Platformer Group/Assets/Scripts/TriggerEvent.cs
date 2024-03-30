@@ -31,7 +31,7 @@ namespace Scripts
             }
             if (LayerMask.NameToLayer("Player") == player)
             {
-            
+                playerEvent.Invoke();
             }
             triggerEnterEvent.Invoke();
             triggerColorEvent.Invoke();
