@@ -35,6 +35,10 @@ public class ItemCollectionTracker : MonoBehaviour
     {
         if (itemData.collected && !itemCollected)
         {
+            if (activatedObjectsCount.value >= activationThreshold.value)
+            {
+                return;
+            }
             activatedObjectsCount.value++;
             itemCollected = true;
             activateEvent.Invoke();
