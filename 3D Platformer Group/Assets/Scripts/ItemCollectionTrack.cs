@@ -1,7 +1,7 @@
-using System.Collections.Generic;
 using Scripts.Data;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 public class ItemCollectionTracker : MonoBehaviour
 {
@@ -19,6 +19,7 @@ public class ItemCollectionTracker : MonoBehaviour
             itemCollected = false;
         }
     }
+
     public void CollectItem()
     {
         if (itemData.collected == false)
