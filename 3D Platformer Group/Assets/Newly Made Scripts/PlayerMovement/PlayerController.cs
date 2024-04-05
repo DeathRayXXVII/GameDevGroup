@@ -11,10 +11,14 @@ public class PlayerController : MonoBehaviour
     private InputActionReference movementControl;
     [SerializeField] 
     private InputActionReference jumpControl;
+    [SerializeField]
+    private InputActionReference runControl;
     
     [Header("Player Stats")]
     [SerializeField]
     private float playerSpeed = 2.0f;
+    [SerializeField]
+    private float runSpeed = 4.0f;
     [SerializeField]
     private float minSpeed = 1.0f;
     [SerializeField]
@@ -31,6 +35,7 @@ public class PlayerController : MonoBehaviour
     private CharacterController controller;
     public bool groundedPlayer;
     private bool isJumping;
+    private bool isRunning;
     private bool isGrounded;
     private bool hasDoubleJumped = false;
     private bool doubleJumpedPurchessed = false;
@@ -91,9 +96,12 @@ public class PlayerController : MonoBehaviour
         float inputMagnitude = Mathf.Clamp01(move.magnitude);
     
         animator.SetFloat("Input Magnitude", inputMagnitude, 0.5f, Time.deltaTime);
-        float speed = Mathf.Lerp(minSpeed, playerSpeed, inputMagnitude);
+        animator.SetBool("IsRunning", isRunning);
+        float speed = isRunning ? runSpeed : playerSpeed;
+        speed *= inputMagnitude;
+        //float speed = Mathf.Lerp(minSpeed, playerSpeed, inputMagnitude);
+        
         move.Normalize();
-    
         move = cameraMainTransform.forward * move.z + cameraMainTransform.right * move.x;
         move.y = 0f;
 
@@ -133,8 +141,18 @@ public class PlayerController : MonoBehaviour
         controller.Move(playerVelocity * Time.deltaTime);
 
         // Makes the character move in the direction of the camera
-        if (movement != Vector2.zero)
+        isRunning = runControl.action.triggered;
+        if (movement != Vector2.zero && isRunning)
         {
+            animator.SetBool("IsRunning", true);
+            animator.SetBool("IsWalking", false);
+            float targetAngle = Mathf.Atan2(movement.x, movement.y) * Mathf.Rad2Deg + cameraMainTransform.eulerAngles.y;
+            Quaternion rotation = Quaternion.Euler(0f, targetAngle, 0f);
+            transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * rotationSpeed);
+        }
+        else if (movement != Vector2.zero && !isRunning)
+        {
+            animator.SetBool("IsRunning", false);
             animator.SetBool("IsWalking", true);
             float targetAngle = Mathf.Atan2(movement.x, movement.y) * Mathf.Rad2Deg + cameraMainTransform.eulerAngles.y;
             Quaternion rotation = Quaternion.Euler(0f, targetAngle, 0f);
@@ -142,6 +160,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            animator.SetBool("IsRunning", false);
             animator.SetBool("IsWalking", false);
         }
     }
