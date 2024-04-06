@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     private InputActionReference jumpControl;
     [SerializeField]
     private InputActionReference runControl;
+    [SerializeField]
+    private InputActionReference attackControl;
     
     [Header("Player Stats")]
     [SerializeField]
@@ -30,31 +32,34 @@ public class PlayerController : MonoBehaviour
     public Vector3 playerVelocity;
     [SerializeField]
     private vector3Data lastGroundedPosition;
+    public GameObject weapon;
     
     private Animator animator;
     private CharacterController controller;
     public bool groundedPlayer;
     private bool isJumping;
     private bool isRunning;
-    private bool isGrounded;
+    public bool isGrounded;
     private bool hasDoubleJumped = false;
     private bool doubleJumpedPurchessed = false;
     public  InventoryItem item;
     private Transform cameraMainTransform;
     [SerializeField]
-    private UnityEvent jumpEvent;
+    private UnityEvent jumpEvent, attackEvent;
     
 
     private void OnEnable()
     {
         movementControl.action.Enable();
         jumpControl.action.Enable();
+        attackControl.action.Enable();
     }
 
     private void OnDisable()
     {
         movementControl.action.Disable();
         jumpControl.action.Disable();
+        attackControl.action.Disable();
     }
 
     private void Start()
@@ -110,6 +115,12 @@ public class PlayerController : MonoBehaviour
         {
             lastGroundedPosition.value = transform.position;
         }
+        if (attackControl.action.triggered && isGrounded)
+        {
+            animator.SetTrigger("IsAttacking");
+            weapon.SetActive(true);
+            attackEvent.Invoke();
+        }
 
         // Jump
         if (jumpControl.action.triggered)
@@ -139,20 +150,15 @@ public class PlayerController : MonoBehaviour
 
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
-
-        // Makes the character move in the direction of the camera
         isRunning = runControl.action.triggered;
-        if (movement != Vector2.zero && isRunning)
+        if (isRunning)
         {
-            animator.SetBool("IsRunning", true);
-            animator.SetBool("IsWalking", false);
-            float targetAngle = Mathf.Atan2(movement.x, movement.y) * Mathf.Rad2Deg + cameraMainTransform.eulerAngles.y;
-            Quaternion rotation = Quaternion.Euler(0f, targetAngle, 0f);
-            transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * rotationSpeed);
+            animator.SetTrigger("IsRunning");
         }
-        else if (movement != Vector2.zero && !isRunning)
+        // Makes the character move in the direction of the camera
+        
+        if (movement != Vector2.zero && !isRunning)
         {
-            animator.SetBool("IsRunning", false);
             animator.SetBool("IsWalking", true);
             float targetAngle = Mathf.Atan2(movement.x, movement.y) * Mathf.Rad2Deg + cameraMainTransform.eulerAngles.y;
             Quaternion rotation = Quaternion.Euler(0f, targetAngle, 0f);
@@ -160,7 +166,6 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            animator.SetBool("IsRunning", false);
             animator.SetBool("IsWalking", false);
         }
     }

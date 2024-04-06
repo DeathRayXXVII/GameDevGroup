@@ -67,6 +67,8 @@ namespace Scripts.Controllers
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(transform.position, lookRadius);
         }
+        
+        
     
     }
 }
