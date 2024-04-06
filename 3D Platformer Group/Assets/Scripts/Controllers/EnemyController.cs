@@ -15,6 +15,7 @@ namespace Scripts.Controllers
         private int i;
         public int patrolWaitTime;
         public WaitForSeconds wfsObj;
+        private Animator anim;
 
         private Transform target;
 
@@ -22,11 +23,20 @@ namespace Scripts.Controllers
         {
             target = PlayerManager.instance.player.transform;
             agent = GetComponent<NavMeshAgent>();
+            anim = GetComponent<Animator>();
             //wfsObj = new WaitForSeconds(patrolWaitTime);
         }
 
         private void Update()
         {
+            if (agent.velocity.magnitude > 0)
+            {
+                anim.SetBool("IsWalking", true);
+            }
+            else
+            {
+                anim.SetBool("IsWalking", false);
+            }
             float distacne = Vector3.Distance(target.position, transform.position);
                     
             if (distacne <= lookRadius)
