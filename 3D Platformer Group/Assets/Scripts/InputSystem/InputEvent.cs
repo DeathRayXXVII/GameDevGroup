@@ -39,6 +39,7 @@ public class InputEvent : MonoBehaviour
         }
         if (input.action.triggered)
         {
+            Debug.LogError("Input Triggered");
             if (isPressed)
             {
                 firstEvent.Invoke();
@@ -68,6 +69,7 @@ public class InputEvent : MonoBehaviour
             return;
         }
         input.action.Enable();
+        inputEnabled = true;
     }
     
     public void OnDisable()
@@ -77,5 +79,6 @@ public class InputEvent : MonoBehaviour
             return;
         }
         input.action.Disable();
+        inputEnabled = false;
     }
 }

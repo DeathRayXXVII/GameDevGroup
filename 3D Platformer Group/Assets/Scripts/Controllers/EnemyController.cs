@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using Scripts.Managers;
 using UnityEngine;
@@ -12,7 +13,7 @@ namespace Scripts.Controllers
         public float remainingDistanceNum = 0.5f;
         public List<Transform> patrolPointList;
         private int i;
-        public int seconds;
+        public int patrolWaitTime;
         public WaitForSeconds wfsObj;
 
         private Transform target;
@@ -21,7 +22,7 @@ namespace Scripts.Controllers
         {
             target = PlayerManager.instance.player.transform;
             agent = GetComponent<NavMeshAgent>();
-            wfsObj = new WaitForSeconds(seconds);
+            //wfsObj = new WaitForSeconds(patrolWaitTime);
         }
 
         private void Update()
@@ -30,7 +31,7 @@ namespace Scripts.Controllers
                     
             if (distacne <= lookRadius)
             {
-                agent.SetDestination((target.position));
+                agent.SetDestination(target.position);
                     
                 if (distacne <= agent.stoppingDistance)
                 {
@@ -40,15 +41,20 @@ namespace Scripts.Controllers
             }
             else
             {
-
-                if (agent.pathPending || !(agent.remainingDistance < remainingDistanceNum)) return;
-                agent.destination = patrolPointList[i].position;
-                i = (i + 1) % patrolPointList.Count;
+                if (agent.pathPending || !(agent.remainingDistance < remainingDistanceNum))
+                {
+                    return;
+                }
+                StartCoroutine(Patrol());
             }
         }
-
-    
-
+        IEnumerator Patrol()
+        {
+            agent.destination = patrolPointList[i].position;
+            yield return new WaitForSeconds(patrolWaitTime);
+            i = (i + 1) % patrolPointList.Count;
+        }
+        
         void FaceTarget()
         {
             Vector3 direction = (target.position - transform.position).normalized;
