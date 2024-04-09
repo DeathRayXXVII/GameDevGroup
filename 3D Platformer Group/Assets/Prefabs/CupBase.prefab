@@ -104,7 +104,7 @@ MonoBehaviour:
   attackControl: {fileID: 4255831259481490724, guid: 8c811aabd354f4d25ac2f9ed970bae0f, type: 3}
   weapon: {fileID: 8995339103724908119}
   damage: {fileID: 11400000, guid: ae55057858ff70c44bbe531c23166373, type: 2}
-  attackRange: 5
+  attackRange: 2
   attackRate: 1
   enemyLayer:
     serializedVersion: 2
@@ -471,6 +471,10 @@ MonoBehaviour:
   playerVelocity: {x: 0, y: 0, z: 0}
   lastGroundedPosition: {fileID: 11400000, guid: c50d2c8103cfb974a8b239d5510a2181, type: 2}
   weapon: {fileID: 8995339103724908119}
+  walkSound: {fileID: 0}
+  walkSound2: {fileID: 0}
+  jumpSound: {fileID: 0}
+  doubleJumpSound: {fileID: 0}
   groundedPlayer: 0
   isGrounded: 0
   item: {fileID: 11400000, guid: 0f0c8488f49022e4a8c5cad69d6ed471, type: 2}
