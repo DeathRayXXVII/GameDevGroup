@@ -69,6 +69,7 @@ public class PlayerResponManager : MonoBehaviour
         cc.GetComponent<Renderer>().enabled = true;
 
         Instantiate(respawnParticles, cc.transform.position, cc.transform.rotation);
+        respawnEvent.Invoke();
     }
     
     public void StartingPosition()
