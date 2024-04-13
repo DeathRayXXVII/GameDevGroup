@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c45a2abe70264d34591bc10aa21e6b98
+guid: 461f6e2c279738748a72afcb6666d1df
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -33,11 +33,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: SlimeHop1
+      name: SlimeAttack
       takeName: Take 001
       internalID: 1827226128182048838
-      firstFrame: 34
-      lastFrame: 54
+      firstFrame: 60
+      lastFrame: 74
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
