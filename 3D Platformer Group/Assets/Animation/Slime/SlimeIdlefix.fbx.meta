@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e37a6bc4e30d476418f5d8abd99068fd
+guid: 9f7516dfbd30a414092eb316ddb072d4
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -36,8 +36,8 @@ ModelImporter:
       name: SlimeIdle
       takeName: Take 001
       internalID: 1827226128182048838
-      firstFrame: 0
-      lastFrame: 31
+      firstFrame: 2
+      lastFrame: 30
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
