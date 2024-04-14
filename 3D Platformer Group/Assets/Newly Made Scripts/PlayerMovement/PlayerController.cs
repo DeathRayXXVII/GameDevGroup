@@ -8,43 +8,33 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [Header("Input System Controls")]
-    [SerializeField] 
-    private InputActionReference movementControl;
-    [SerializeField] 
-    private InputActionReference jumpControl;
-    [SerializeField]
-    private InputActionReference runControl;
-    [SerializeField]
-    private InputActionReference attackControl;
+    [SerializeField] private InputActionReference movementControl;
+    [SerializeField] private InputActionReference jumpControl;
+    [SerializeField] private InputActionReference runControl;
+    [SerializeField] private InputActionReference attackControl;
+    [SerializeField] private InputActionReference interactControl;
     
     [Header("Player Stats")]
-    [SerializeField]
-    private float playerSpeed = 2.0f;
-    [SerializeField]
-    private float runSpeed = 4.0f;
-    [SerializeField]
-    private float minSpeed = 1.0f;
-    [SerializeField]
-    private float jumpHeight = 1.0f;
-    [SerializeField]
-    private float gravityValue = -9.81f;
-    [SerializeField] 
-    private float rotationSpeed = 4f;
+    [SerializeField] private float playerSpeed = 2.0f;
+    [SerializeField] private float runSpeed = 4.0f;
+    [SerializeField] private float minSpeed = 1.0f;
+    [SerializeField] private float jumpHeight = 1.0f;
+    [SerializeField] private float gravityValue = -9.81f;
+    [SerializeField] private float rotationSpeed = 4f;
     public Vector3 playerVelocity;
-    [SerializeField]
-    private vector3Data lastGroundedPosition;
+    [SerializeField] private vector3Data lastGroundedPosition;
     public GameObject weapon;
+    
+    [SerializeField] private DialogueUI dialogueUI;
+    public DialogueUI DialogueUI => dialogueUI;
+    public IInteractable Interactable { get; set; }
     
     private Animator animator;
     private CharacterController controller;
-    [SerializeField]
-    private AudioSource walkSound;
-    [SerializeField]
-    private AudioSource walkSound2;
-    [SerializeField]
-    private AudioSource jumpSound;
-    [SerializeField]
-    private AudioSource doubleJumpSound;
+    [SerializeField] private AudioSource walkSound;
+    [SerializeField] private AudioSource walkSound2;
+    [SerializeField] private AudioSource jumpSound;
+    [SerializeField] private AudioSource doubleJumpSound;
     public bool groundedPlayer;
     private bool isJumping;
     private bool isRunning;
@@ -53,8 +43,7 @@ public class PlayerController : MonoBehaviour
     private bool doubleJumpedPurchessed = false;
     public  InventoryItem item;
     private Transform cameraMainTransform;
-    [SerializeField]
-    private UnityEvent jumpEvent, attackEvent;
+    [SerializeField] private UnityEvent jumpEvent, attackEvent;
     
 
     private void OnEnable()
@@ -62,6 +51,7 @@ public class PlayerController : MonoBehaviour
         movementControl.action.Enable();
         jumpControl.action.Enable();
         attackControl.action.Enable();
+        interactControl.action.Enable();
     }
 
     private void OnDisable()
@@ -69,6 +59,7 @@ public class PlayerController : MonoBehaviour
         movementControl.action.Disable();
         jumpControl.action.Disable();
         attackControl.action.Disable();
+        interactControl.action.Disable();
     }
 
     private void Start()
@@ -198,6 +189,11 @@ public class PlayerController : MonoBehaviour
         else
         {
             animator.SetBool("IsWalking", false);
+        }
+
+        if (interactControl.action.triggered)
+        {
+            Interactable?.Interact(this);
         }
     }
     

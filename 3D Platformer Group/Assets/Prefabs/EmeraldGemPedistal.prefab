@@ -13,8 +13,7 @@ GameObject:
   - component: {fileID: 721168467362205893}
   - component: {fileID: 1403036996760221423}
   - component: {fileID: 2076240724948611799}
-  - component: {fileID: 709346174771654028}
-  - component: {fileID: 7821263763089630968}
+  - component: {fileID: 6551923952546800229}
   m_Layer: 0
   m_Name: EmeraldGemPedistal
   m_TagString: Untagged
@@ -32,8 +31,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 139.97, y: 8.673001, z: 97.61}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.6864624, y: 2.6864624, z: 2.6864624}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3069122744003559369}
   m_Father: {fileID: 0}
@@ -139,7 +138,7 @@ MonoBehaviour:
           m_StringArgument: All Collected
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 709346174771654028}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
@@ -172,7 +171,7 @@ MonoBehaviour:
   itemCollected: 0
   activatedObjectsCount: {fileID: 11400000, guid: 42e399ab5709bed4bb84b80171edceee, type: 2}
   activationThreshold: {fileID: 11400000, guid: 888780da8eb791e478c8a292448f7532, type: 2}
---- !u!114 &709346174771654028
+--- !u!114 &6551923952546800229
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -181,92 +180,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 419887507311400648}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0e6e1286f242044c89849ed8da85435, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerEnterEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  triggerExitEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: PressYOff
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 7821263763089630968}
-        m_TargetAssemblyTypeName: InputEvent, Assembly-CSharp
-        m_MethodName: OnDisable
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: PressYOff
-          m_BoolArgument: 0
-        m_CallState: 2
-  triggerColorEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  clickEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  playerEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: PressYOn
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 7821263763089630968}
-        m_TargetAssemblyTypeName: InputEvent, Assembly-CSharp
-        m_MethodName: OnEnable
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: PressYOn
-          m_BoolArgument: 0
-        m_CallState: 2
-  coin:
-    serializedVersion: 2
-    m_Bits: 0
-  player:
-    serializedVersion: 2
-    m_Bits: 64
---- !u!114 &7821263763089630968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419887507311400648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba5e9dd4885438c4a9fc20bd92bc9246, type: 3}
+  m_Script: {fileID: 11500000, guid: c5e43e32b02bf0e43a20de335e2894bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   input: {fileID: 8919896885781337332, guid: 8c811aabd354f4d25ac2f9ed970bae0f, type: 3}
-  firstEvent:
+  enterEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2076240724948611799}
@@ -281,11 +199,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  secondEvent:
+  exitEvent:
     m_PersistentCalls:
       m_Calls: []
-  inputEnabled: 0
-  firstSelectedButton: {fileID: 0}
 --- !u!1 &7883593503636972371
 GameObject:
   m_ObjectHideFlags: 0
