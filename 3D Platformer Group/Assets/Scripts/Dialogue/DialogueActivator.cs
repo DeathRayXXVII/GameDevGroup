@@ -34,11 +34,17 @@ public class DialogueActivator : MonoBehaviour, IInteractable
         }
     }
 
-    public void Interact(PlayerController playerController)
+    public void Interact(PlayerController player)
     {
-        if (requireinput)
+        foreach (DialogueResponseEvents responseEvents in GetComponents<DialogueResponseEvents>())
         {
-            playerController.DialogueUI.ShowDialogue(dialogueData);
+            if (responseEvents.DialogueData == dialogueData)
+            {
+                player.DialogueUI.AddResponseEvents(responseEvents.Events);
+                break;
+            }
         }
+
+        player.DialogueUI.ShowDialogue(dialogueData);
     }
 }

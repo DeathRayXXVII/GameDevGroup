@@ -9,7 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2fbe06bb638b524d959ecbeaadfdb69, type: 3}
-  m_Name: TestStartingPosition
+  m_Script: {fileID: 11500000, guid: 339d107e6dd75814098f263d6b4d372b, type: 3}
+  m_Name: TutorialDialoge
   m_EditorClassIdentifier: 
-  value: {x: 129.97, y: 9.13, z: 162.82}
+  dialogue:
+  - 'To Jump
+
+    PC- press Space bar
+
+    Controller- Press X'
+  responses: []

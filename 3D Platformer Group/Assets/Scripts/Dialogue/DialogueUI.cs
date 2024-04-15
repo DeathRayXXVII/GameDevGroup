@@ -27,6 +27,10 @@ public class DialogueUI : MonoBehaviour
         dialogueBox.SetActive(true);
         StartCoroutine(StepThroughDialogue(dialogueObj));
     }
+    public void AddResponseEvents(ResponseEvent[] responseEvents)
+    {
+        responseHandler.AddResponseEvents(responseEvents);
+    }
     private IEnumerator StepThroughDialogue(DialogueData dialogueObj)
     {
         for (int i = 0; i < dialogueObj.Dialogue.Length; i++)
@@ -35,9 +39,9 @@ public class DialogueUI : MonoBehaviour
             yield return RunTypingEffect(dialogue);
             textLabel.text = dialogue;
             if (i == dialogueObj.Dialogue.Length - 1 && dialogueObj.HasResponses) break;
-            {
-                responseHandler.ShowResponses(dialogueObj.Responses);
-            }
+            // {
+            //     responseHandler.ShowResponses(dialogueObj.Responses);
+            // }
             yield return null;
             yield return new WaitUntil(() => inputAction.action.triggered);
         }
@@ -60,6 +64,10 @@ public class DialogueUI : MonoBehaviour
         {
             yield return null;
             //Add input for skipping dialogue at some point
+            if (inputAction.action.triggered)
+            {
+                typewriterEffect.Stop();
+            }
         }
     }
     

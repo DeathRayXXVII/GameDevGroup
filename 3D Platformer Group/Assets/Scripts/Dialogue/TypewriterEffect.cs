@@ -5,66 +5,98 @@ using TMPro;
 
 public class TypewriterEffect : MonoBehaviour
 {
-    [SerializeField] private float textSpeed = 30f;
+    [SerializeField] private float textSpeed = 50f;
     public bool IsRunning { get; private set; }
-    private readonly Dictionary<HashSet<char>, float> punctuations = new Dictionary<HashSet<char>, float>
+    private readonly List<Punctuation> punctuations = new List<Punctuation>()
     {
-        {new HashSet<char> {'.', '!', '?'}, 0.6f},
-        {new HashSet<char> {',', ';', ':'}, 0.3f},
-        {new HashSet<char> {' '}, 0.1f}
+        new Punctuation(new HashSet<char>() {'.', '!', '?'}, 0.6f),
+        new Punctuation(new HashSet<char>() {',', ';', ':'}, 0.3f)
     };
     
     private Coroutine typingCoroutine;
+    private TMP_Text textLabel;
+    private string text;
     
     public void Run(string text, TMP_Text textLabel)
     {
-        typingCoroutine = StartCoroutine(TypeText(text, textLabel));
+        this.text = text;
+        this.textLabel = textLabel;
+
+        typingCoroutine = StartCoroutine(TypeText());
     }
     
     public void Stop()
     {
+        if (!IsRunning) return;
+
         StopCoroutine(typingCoroutine);
-        IsRunning = false;
+        OnTypingCompleted();
     }
 
-    private IEnumerator TypeText(string text, TMP_Text textLabel)
+    private IEnumerator TypeText()
     {
         IsRunning = true;
-        textLabel.text = string.Empty;
-        
+
+        textLabel.maxVisibleCharacters = 0;
+        textLabel.text = text;
+
         float t = 0;
         int charIndex = 0;
+
         while (charIndex < text.Length)
         {
             int lastCharIndex = charIndex;
+
             t += Time.deltaTime * textSpeed;
+
             charIndex = Mathf.FloorToInt(t);
             charIndex = Mathf.Clamp(charIndex, 0, text.Length);
+
             for (int i = lastCharIndex; i < charIndex; i++)
             {
-                bool isLast = i == text.Length - 1;
-                textLabel.text = text.Substring(0, i + 1);
+                bool isLast = i >= text.Length - 1;
 
-                if (IsPunctuation(text[i], out float waitTime) && !isLast && !IsPunctuation(text[i +1], out _))
+                textLabel.maxVisibleCharacters = i + 1;
+
+                if (IsPunctuation(text[i], out float waitTime) && !isLast && !IsPunctuation(text[i + 1], out _))
                 {
                     yield return new WaitForSeconds(waitTime);
                 }
             }
+
             yield return null;
         }
-        IsRunning = false;
+
+        OnTypingCompleted();
     }
-    private bool IsPunctuation(char c, out float waitTime)
+    private void OnTypingCompleted()
     {
-        foreach (KeyValuePair<HashSet<char>, float> punctuationCategory in punctuations)
+        IsRunning = false;
+        textLabel.maxVisibleCharacters = text.Length;
+    }
+    private bool IsPunctuation(char character, out float waitTime)
+    {
+        foreach (Punctuation punctuationCategory in punctuations)
         {
-            if (punctuationCategory.Key.Contains(c))
+            if (punctuationCategory.Punctuations.Contains(character))
             {
-                waitTime = punctuationCategory.Value;
+                waitTime = punctuationCategory.WaitTime;
                 return true;
             }
         }
+
         waitTime = default;
         return false;
+    }
+    private readonly struct Punctuation
+    {
+        public readonly HashSet<char> Punctuations;
+        public readonly float WaitTime;
+
+        public Punctuation(HashSet<char> punctuations, float waitTime)
+        {
+            Punctuations = punctuations;
+            WaitTime = waitTime;
+        }
     }
 }

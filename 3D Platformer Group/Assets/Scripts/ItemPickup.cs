@@ -5,8 +5,7 @@ public class ItemPickup : MonoBehaviour
 {
     [Header("Pickup Settings")]
     public InputActionReference input;
-    [SerializeField]
-    private Transform hand;
+    [SerializeField] private Transform hand;
     private GameObject item;
     private Rigidbody itemRb;
     [SerializeField] private bool inputTriggered;
