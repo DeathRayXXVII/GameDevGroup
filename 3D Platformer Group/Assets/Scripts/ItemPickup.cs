@@ -5,14 +5,11 @@ public class ItemPickup : MonoBehaviour
 {
     [Header("Pickup Settings")]
     public InputActionReference input;
-    [SerializeField]
-    private Transform hand;
+    [SerializeField] private Transform hand;
     private GameObject item;
     private Rigidbody itemRb;
-    [SerializeField]
-    private bool inputTriggered;
-    [SerializeField]
-    private bool inputEnabled;
+    [SerializeField] private bool inputTriggered;
+    [SerializeField] private bool inputEnabled;
     
     [Header("Physics Settings")]
     [SerializeField] private float pickupRange = 5.0f;

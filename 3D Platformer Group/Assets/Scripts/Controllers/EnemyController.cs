@@ -1,8 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
-using Scripts.Managers;
 using UnityEngine;
 using UnityEngine.AI;
+using Scripts.Managers;
 
 namespace Scripts.Controllers
 {
@@ -11,10 +10,9 @@ namespace Scripts.Controllers
         public float lookRadius = 10f;
         private NavMeshAgent agent;
         public float remainingDistanceNum = 0.5f;
-        public List<Transform> patrolPointList;
+        [SerializeField] private WaypointPath waypointPath;
         private int i;
         public int patrolWaitTime;
-        public WaitForSeconds wfsObj;
         private Animator anim;
 
         private Transform target;
@@ -24,7 +22,6 @@ namespace Scripts.Controllers
             target = PlayerManager.instance.player.transform;
             agent = GetComponent<NavMeshAgent>();
             anim = GetComponent<Animator>();
-            //wfsObj = new WaitForSeconds(patrolWaitTime);
         }
 
         private void Update()
@@ -38,11 +35,11 @@ namespace Scripts.Controllers
                 anim.SetBool("IsWalking", false);
             }
             float distacne = Vector3.Distance(target.position, transform.position);
-                    
+
             if (distacne <= lookRadius)
             {
                 agent.SetDestination(target.position);
-                    
+
                 if (distacne <= agent.stoppingDistance)
                 {
                     // Attack the target
@@ -60,11 +57,11 @@ namespace Scripts.Controllers
         }
         IEnumerator Patrol()
         {
-            agent.destination = patrolPointList[i].position;
+            agent.destination = waypointPath.GetWaypoint(i).position;
             yield return new WaitForSeconds(patrolWaitTime);
-            i = (i + 1) % patrolPointList.Count;
+            i = (i + 1) % waypointPath.transform.childCount;
         }
-        
+
         void FaceTarget()
         {
             Vector3 direction = (target.position - transform.position).normalized;
@@ -77,8 +74,5 @@ namespace Scripts.Controllers
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(transform.position, lookRadius);
         }
-        
-        
-    
     }
 }
