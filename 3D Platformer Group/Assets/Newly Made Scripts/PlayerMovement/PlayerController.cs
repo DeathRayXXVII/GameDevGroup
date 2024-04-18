@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Scripts.Data;
 using UnityEngine;
@@ -23,6 +24,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float rotationSpeed = 4f;
     public Vector3 playerVelocity;
     [SerializeField] private vector3Data lastGroundedPosition;
+    public LayerMask groundLayer;
     public GameObject weapon;
     
     [SerializeField] private DialogueUI dialogueUI;
@@ -111,10 +113,6 @@ public class PlayerController : MonoBehaviour
         move.y = 0f;
 
         controller.Move( speed * Time.deltaTime * move);
-        if (groundedPlayer)
-        {
-            lastGroundedPosition.value = transform.position;
-        }
         if (attackControl.action.triggered && isGrounded)
         {
             animator.SetTrigger("IsAttacking");
@@ -196,21 +194,41 @@ public class PlayerController : MonoBehaviour
             Interactable?.Interact(this);
         }
     }
-    
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (((1 << collision.gameObject.layer) & groundLayer) != 0)
+        {
+            lastGroundedPosition.value = transform.position;
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (((1 << collision.gameObject.layer) & groundLayer) != 0)
+        {
+            lastGroundedPosition.value = Vector3.zero;
+        }
+    }
+
     public void DoubleJumpControl()
     {
         doubleJumpedPurchessed = true;
     }
     IEnumerator AttackingDelay()
     {
-        yield return new WaitForSeconds(0.5f);
         weapon.SetActive(true);
         attackEvent.Invoke();
+        yield return new WaitForSeconds(0);
     }
     IEnumerator PlaySecondSound(float time)
     {
         yield return new WaitForSeconds(time);
         walkSound2.Play();
+    }
+    
+    public void SetLastGroundedPosition()
+    {
+        lastGroundedPosition.value = transform.position;
     }
 }
 
