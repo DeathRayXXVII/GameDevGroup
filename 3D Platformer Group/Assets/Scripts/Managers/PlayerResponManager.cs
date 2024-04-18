@@ -49,11 +49,11 @@ public class PlayerResponManager : MonoBehaviour
 
         yield return new WaitForSeconds(respawnDelay);
         
-        if (playerController != null && !playerController.groundedPlayer)
+        /*if (playerController != null && !playerController.groundedPlayer)
         {
             cc.transform.position = respawnPosition.value;
         }
-        else if (life.value > 1 && startSpawn.value)
+        else*/ if (life.value > 1 && startSpawn.value)
         {
             cc.transform.position = spawnPosition.value;
         }
