@@ -27,4 +27,7 @@ public class InteractableInput : MonoBehaviour, IInteractable
     {
         interactEvent.Invoke();
     }
+    public void Interact1(PlayerController playerController)
+    {
+    }
 }

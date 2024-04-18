@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private InputActionReference runControl;
     [SerializeField] private InputActionReference attackControl;
     [SerializeField] private InputActionReference interactControl;
+    [SerializeField] public InputActionReference pickupControl;
+    public bool pickupTriggered;
     
     [Header("Player Stats")]
     [SerializeField] private float playerSpeed = 2.0f;
@@ -54,6 +56,7 @@ public class PlayerController : MonoBehaviour
         jumpControl.action.Enable();
         attackControl.action.Enable();
         interactControl.action.Enable();
+        pickupControl.action.Enable();
     }
 
     private void OnDisable()
@@ -62,6 +65,7 @@ public class PlayerController : MonoBehaviour
         jumpControl.action.Disable();
         attackControl.action.Disable();
         interactControl.action.Disable();
+        pickupControl.action.Disable();
     }
 
     private void Start()
@@ -127,7 +131,10 @@ public class PlayerController : MonoBehaviour
         if (jumpControl.action.triggered)
         {
             animator.SetBool("IsJumping", true);
-            jumpSound.Play();
+            if (!isJumping)
+            {
+                jumpSound.Play();
+            }
             isJumping = true;
             if (item.UsedOrPurchase)
             {
@@ -191,6 +198,12 @@ public class PlayerController : MonoBehaviour
 
         if (interactControl.action.triggered)
         {
+            Interactable?.Interact(this);
+        }
+
+        if (pickupControl.action.triggered)
+        { 
+            //pickupTriggered = !pickupTriggered;
             Interactable?.Interact(this);
         }
     }

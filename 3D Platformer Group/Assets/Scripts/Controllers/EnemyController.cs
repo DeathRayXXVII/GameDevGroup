@@ -52,6 +52,11 @@ namespace Scripts.Controllers
                 {
                     return;
                 }
+
+                if (waypointPath == null)
+                {
+                    return;
+                }
                 StartCoroutine(Patrol());
             }
         }

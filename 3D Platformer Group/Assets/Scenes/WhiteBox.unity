@@ -1634,6 +1634,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9219350413554437579, guid: c840c439ce6cabc40973c5c6829661ed, type: 3}
+      propertyPath: waypointPath
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 387608143037350173, guid: c840c439ce6cabc40973c5c6829661ed, type: 3}
@@ -9636,6 +9640,10 @@ PrefabInstance:
       propertyPath: playerEvent.m_PersistentCalls.m_Calls.Array.data[5].m_Target
       value: 
       objectReference: {fileID: 1359098070}
+    - target: {fileID: 9219350413554437579, guid: c840c439ce6cabc40973c5c6829661ed, type: 3}
+      propertyPath: waypointPath
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 387608143037350173, guid: c840c439ce6cabc40973c5c6829661ed, type: 3}
@@ -16756,6 +16764,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9219350413554437579, guid: c840c439ce6cabc40973c5c6829661ed, type: 3}
+      propertyPath: waypointPath
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 387608143037350173, guid: c840c439ce6cabc40973c5c6829661ed, type: 3}
@@ -19023,6 +19035,7 @@ GameObject:
   - component: {fileID: 559274077}
   - component: {fileID: 559274076}
   - component: {fileID: 559274083}
+  - component: {fileID: 559274084}
   m_Layer: 10
   m_Name: MatchBlock (8)
   m_TagString: Untagged
@@ -19237,6 +19250,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 126963678}
+--- !u!114 &559274084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559274074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6d4c0d43a705c34ca0a3f154a00793b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hand: {fileID: 485175733}
+  inputTriggered: 0
+  inputEnabled: 0
+  enterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  exitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  interactEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  pickupRange: 5
+  pickupForce: 150
 --- !u!4 &563979715 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2723410593647503918, guid: 9f7ee410c642f4e4facc0cefab8db5a4, type: 3}
@@ -20733,6 +20772,10 @@ PrefabInstance:
     - target: {fileID: 6034685425217238340, guid: c840c439ce6cabc40973c5c6829661ed, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9219350413554437579, guid: c840c439ce6cabc40973c5c6829661ed, type: 3}
+      propertyPath: waypointPath
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -22981,6 +23024,10 @@ PrefabInstance:
     - target: {fileID: 6034685425217238340, guid: c840c439ce6cabc40973c5c6829661ed, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9219350413554437579, guid: c840c439ce6cabc40973c5c6829661ed, type: 3}
+      propertyPath: waypointPath
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -27020,7 +27067,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6034685425217238340, guid: c840c439ce6cabc40973c5c6829661ed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.82
+      value: -0.982
       objectReference: {fileID: 0}
     - target: {fileID: 6034685425217238340, guid: c840c439ce6cabc40973c5c6829661ed, type: 3}
       propertyPath: m_LocalPosition.z
@@ -30880,6 +30927,10 @@ PrefabInstance:
       propertyPath: playerEvent.m_PersistentCalls.m_Calls.Array.data[5].m_Target
       value: 
       objectReference: {fileID: 1359098070}
+    - target: {fileID: 9219350413554437579, guid: c840c439ce6cabc40973c5c6829661ed, type: 3}
+      propertyPath: waypointPath
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 387608143037350173, guid: c840c439ce6cabc40973c5c6829661ed, type: 3}
@@ -31038,7 +31089,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 972792256}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.007792555, y: -0.975795, z: 0.21568653, w: 0.03525457}
+  m_LocalRotation: {x: 0.0077925646, y: -0.975795, z: 0.21568653, w: 0.035254613}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -31733,6 +31784,10 @@ PrefabInstance:
     - target: {fileID: 6034685425217238340, guid: c840c439ce6cabc40973c5c6829661ed, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9219350413554437579, guid: c840c439ce6cabc40973c5c6829661ed, type: 3}
+      propertyPath: waypointPath
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -35515,6 +35570,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9219350413554437579, guid: c840c439ce6cabc40973c5c6829661ed, type: 3}
+      propertyPath: waypointPath
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7695320117574239665, guid: c840c439ce6cabc40973c5c6829661ed, type: 3}
@@ -38461,7 +38520,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6034685425217238340, guid: c840c439ce6cabc40973c5c6829661ed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.794
+      value: -0.96
       objectReference: {fileID: 0}
     - target: {fileID: 6034685425217238340, guid: c840c439ce6cabc40973c5c6829661ed, type: 3}
       propertyPath: m_LocalPosition.z
@@ -38498,6 +38557,10 @@ PrefabInstance:
     - target: {fileID: 9219350413554437579, guid: c840c439ce6cabc40973c5c6829661ed, type: 3}
       propertyPath: lookRadius
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9219350413554437579, guid: c840c439ce6cabc40973c5c6829661ed, type: 3}
+      propertyPath: waypointPath
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -39303,7 +39366,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1288335659}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.008805768, y: -0.9691707, z: 0.24373052, w: 0.03501528}
+  m_LocalRotation: {x: 0.008805764, y: -0.9691707, z: 0.24373052, w: 0.035015266}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -39997,6 +40060,10 @@ PrefabInstance:
     - target: {fileID: 6034685425217238340, guid: c840c439ce6cabc40973c5c6829661ed, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9219350413554437579, guid: c840c439ce6cabc40973c5c6829661ed, type: 3}
+      propertyPath: waypointPath
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -42422,7 +42489,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1400095210
 Transform:
   m_ObjectHideFlags: 0
@@ -44361,6 +44428,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9219350413554437579, guid: c840c439ce6cabc40973c5c6829661ed, type: 3}
+      propertyPath: waypointPath
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 387608143037350173, guid: c840c439ce6cabc40973c5c6829661ed, type: 3}
@@ -45011,6 +45082,10 @@ PrefabInstance:
       propertyPath: playerEvent.m_PersistentCalls.m_Calls.Array.data[5].m_Target
       value: 
       objectReference: {fileID: 1359098070}
+    - target: {fileID: 9219350413554437579, guid: c840c439ce6cabc40973c5c6829661ed, type: 3}
+      propertyPath: waypointPath
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 387608143037350173, guid: c840c439ce6cabc40973c5c6829661ed, type: 3}
@@ -45359,7 +45434,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1495364884}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.24388956, y: 0.000000016923154, z: -0.0000000042558956, w: 0.96980304}
+  m_LocalRotation: {x: 0.24388956, y: -0.000000016923154, z: 0.0000000042558956, w: 0.96980304}
   m_LocalPosition: {x: 219.65, y: 26.61, z: -43.38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -45378,10 +45453,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6d4c0d43a705c34ca0a3f154a00793b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: {fileID: -4805555380364952449, guid: 8c811aabd354f4d25ac2f9ed970bae0f, type: 3}
   hand: {fileID: 485175733}
   inputTriggered: 0
   inputEnabled: 0
+  enterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  exitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  interactEvent:
+    m_PersistentCalls:
+      m_Calls: []
   pickupRange: 5
   pickupForce: 150
 --- !u!1001 &1497155383
@@ -66958,6 +67041,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9219350413554437579, guid: c840c439ce6cabc40973c5c6829661ed, type: 3}
+      propertyPath: waypointPath
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 387608143037350173, guid: c840c439ce6cabc40973c5c6829661ed, type: 3}
@@ -67458,6 +67545,10 @@ PrefabInstance:
     - target: {fileID: 6034685425217238340, guid: c840c439ce6cabc40973c5c6829661ed, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9219350413554437579, guid: c840c439ce6cabc40973c5c6829661ed, type: 3}
+      propertyPath: waypointPath
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -72753,6 +72844,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1359098067}
     - target: {fileID: 8886373065412349981, guid: 5914960cb818d3d4a9594c0d77407807, type: 3}
+      propertyPath: pickupControl
+      value: 
+      objectReference: {fileID: -4805555380364952449, guid: 8c811aabd354f4d25ac2f9ed970bae0f, type: 3}
+    - target: {fileID: 8886373065412349981, guid: 5914960cb818d3d4a9594c0d77407807, type: 3}
       propertyPath: doubleJumpSound
       value: 
       objectReference: {fileID: 1359098065}
@@ -75032,11 +75127,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 210525802335938972, guid: 77035479302766c46ac2d0bdef896831, type: 3}
       propertyPath: awakeEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 210525802335938972, guid: 77035479302766c46ac2d0bdef896831, type: 3}
       propertyPath: startEvent.m_PersistentCalls.m_Calls.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 210525802335938972, guid: 77035479302766c46ac2d0bdef896831, type: 3}
+      propertyPath: awakeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 210525802335938972, guid: 77035479302766c46ac2d0bdef896831, type: 3}
       propertyPath: startEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
@@ -75045,7 +75144,7 @@ PrefabInstance:
     - target: {fileID: 210525802335938972, guid: 77035479302766c46ac2d0bdef896831, type: 3}
       propertyPath: awakeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1106193303}
     - target: {fileID: 210525802335938972, guid: 77035479302766c46ac2d0bdef896831, type: 3}
       propertyPath: awakeEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -75067,12 +75166,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1935102470}
     - target: {fileID: 210525802335938972, guid: 77035479302766c46ac2d0bdef896831, type: 3}
+      propertyPath: awakeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 210525802335938972, guid: 77035479302766c46ac2d0bdef896831, type: 3}
       propertyPath: startEvent.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 210525802335938972, guid: 77035479302766c46ac2d0bdef896831, type: 3}
+      propertyPath: awakeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 210525802335938972, guid: 77035479302766c46ac2d0bdef896831, type: 3}
       propertyPath: startEvent.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
       value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 210525802335938972, guid: 77035479302766c46ac2d0bdef896831, type: 3}
+      propertyPath: awakeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.Animator, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 210525802335938972, guid: 77035479302766c46ac2d0bdef896831, type: 3}
       propertyPath: startEvent.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
@@ -75085,6 +75196,14 @@ PrefabInstance:
     - target: {fileID: 210525802335938972, guid: 77035479302766c46ac2d0bdef896831, type: 3}
       propertyPath: startEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 210525802335938972, guid: 77035479302766c46ac2d0bdef896831, type: 3}
+      propertyPath: awakeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: End
+      objectReference: {fileID: 0}
+    - target: {fileID: 210525802335938972, guid: 77035479302766c46ac2d0bdef896831, type: 3}
+      propertyPath: awakeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 210525802335938972, guid: 77035479302766c46ac2d0bdef896831, type: 3}
       propertyPath: startEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
