@@ -462,6 +462,7 @@ MonoBehaviour:
   jumpControl: {fileID: -1628385083307457143, guid: 8c811aabd354f4d25ac2f9ed970bae0f, type: 3}
   runControl: {fileID: 9000978579897787141, guid: 8c811aabd354f4d25ac2f9ed970bae0f, type: 3}
   attackControl: {fileID: 4255831259481490724, guid: 8c811aabd354f4d25ac2f9ed970bae0f, type: 3}
+  interactControl: {fileID: 0}
   playerSpeed: 10
   runSpeed: 4
   minSpeed: 0
@@ -470,7 +471,11 @@ MonoBehaviour:
   rotationSpeed: 10
   playerVelocity: {x: 0, y: 0, z: 0}
   lastGroundedPosition: {fileID: 11400000, guid: c50d2c8103cfb974a8b239d5510a2181, type: 2}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   weapon: {fileID: 8995339103724908119}
+  dialogueUI: {fileID: 0}
   walkSound: {fileID: 0}
   walkSound2: {fileID: 0}
   jumpSound: {fileID: 0}
