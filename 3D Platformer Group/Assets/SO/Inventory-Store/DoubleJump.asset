@@ -20,6 +20,6 @@ MonoBehaviour:
   floatLevel: 0
   gameArt: {fileID: 0}
   previewMaterial: {fileID: 0}
-  usedOrPurchase: 1
+  usedOrPurchase: 0
   gameActionObj: {fileID: 11400000, guid: 18d67a68f04115347a0d8a3510ee1c20, type: 2}
   dropChance: 0

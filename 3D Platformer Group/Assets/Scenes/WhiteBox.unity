@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0889309, g: 0.09400054, b: 0.10766523, a: 1}
+  m_IndirectSpecularColor: {r: 0.27995563, g: 0.293263, b: 0.33106494, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -15709,8 +15709,24 @@ PrefabInstance:
       value: TriangleGemPedistal
       objectReference: {fileID: 0}
     - target: {fileID: 4522491609548309827, guid: 16df339e761909d449b5710b5ebc552d, type: 3}
+      propertyPath: allItemsCollectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522491609548309827, guid: 16df339e761909d449b5710b5ebc552d, type: 3}
       propertyPath: allItemsCollectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
+      objectReference: {fileID: 2043952916}
+    - target: {fileID: 4522491609548309827, guid: 16df339e761909d449b5710b5ebc552d, type: 3}
+      propertyPath: allItemsCollectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522491609548309827, guid: 16df339e761909d449b5710b5ebc552d, type: 3}
+      propertyPath: allItemsCollectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.Animator, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522491609548309827, guid: 16df339e761909d449b5710b5ebc552d, type: 3}
+      propertyPath: allItemsCollectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Start
       objectReference: {fileID: 0}
     - target: {fileID: 5039815776987028614, guid: 16df339e761909d449b5710b5ebc552d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17685,6 +17701,14 @@ PrefabInstance:
     - target: {fileID: 1852245147830858864, guid: b8b52b1f23d75c94091a38f7776aedc2, type: 3}
       propertyPath: m_Name
       value: MovingSpikeBox (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4950853607793095617, guid: b8b52b1f23d75c94091a38f7776aedc2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5804348448492511507, guid: b8b52b1f23d75c94091a38f7776aedc2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6690311235387527612, guid: b8b52b1f23d75c94091a38f7776aedc2, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -34296,6 +34320,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingSpikeBox (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4950853607793095617, guid: b8b52b1f23d75c94091a38f7776aedc2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5804348448492511507, guid: b8b52b1f23d75c94091a38f7776aedc2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6690311235387527612, guid: b8b52b1f23d75c94091a38f7776aedc2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -39971,8 +40003,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1875856699}
     m_Modifications:
     - target: {fileID: 2134362849294678838, guid: 0ca511240da4f514e951ce1e0d1fc8a4, type: 3}
+      propertyPath: allItemsCollectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134362849294678838, guid: 0ca511240da4f514e951ce1e0d1fc8a4, type: 3}
       propertyPath: allItemsCollectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
+      objectReference: {fileID: 2043952916}
+    - target: {fileID: 2134362849294678838, guid: 0ca511240da4f514e951ce1e0d1fc8a4, type: 3}
+      propertyPath: allItemsCollectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134362849294678838, guid: 0ca511240da4f514e951ce1e0d1fc8a4, type: 3}
+      propertyPath: allItemsCollectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.Animator, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134362849294678838, guid: 0ca511240da4f514e951ce1e0d1fc8a4, type: 3}
+      propertyPath: allItemsCollectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Start
       objectReference: {fileID: 0}
     - target: {fileID: 3155043155719691519, guid: 0ca511240da4f514e951ce1e0d1fc8a4, type: 3}
       propertyPath: m_Name
@@ -40587,7 +40635,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b17bf7de58a579a4492516154f8062ad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2043952916}
   m_SourcePrefab: {fileID: 100100000, guid: b17bf7de58a579a4492516154f8062ad, type: 3}
 --- !u!4 &1225477524 stripped
 Transform:
@@ -45070,8 +45121,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2076240724948611799, guid: 20fc79668100ffe4f8e3b31931b22acf, type: 3}
+      propertyPath: allItemsCollectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2076240724948611799, guid: 20fc79668100ffe4f8e3b31931b22acf, type: 3}
       propertyPath: allItemsCollectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
+      objectReference: {fileID: 2043952916}
+    - target: {fileID: 2076240724948611799, guid: 20fc79668100ffe4f8e3b31931b22acf, type: 3}
+      propertyPath: allItemsCollectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 2076240724948611799, guid: 20fc79668100ffe4f8e3b31931b22acf, type: 3}
+      propertyPath: allItemsCollectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.Animator, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2076240724948611799, guid: 20fc79668100ffe4f8e3b31931b22acf, type: 3}
+      propertyPath: allItemsCollectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Start
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -52784,7 +52851,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 0.59
+    m_Strength: 0.368
     m_Bias: 0.05
     m_NormalBias: 0.72
     m_NearPlane: 0.2
@@ -67587,7 +67654,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2011760470}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.006779636, y: -0.98157215, z: 0.1876503, w: 0.03546332}
+  m_LocalRotation: {x: 0.0067796395, y: -0.98157215, z: 0.1876503, w: 0.035463333}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -68758,6 +68825,32 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &2043952915 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b17bf7de58a579a4492516154f8062ad, type: 3}
+  m_PrefabInstance: {fileID: 1224270246}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2043952916
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043952915}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 51bab8010f83d7e41b4b3e0ddc7cf789, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2044480260
 GameObject:
   m_ObjectHideFlags: 0
@@ -69333,8 +69426,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1875856699}
     m_Modifications:
     - target: {fileID: 31755050959065653, guid: 64ade2d5ceacbd0418f97d20563ce59b, type: 3}
+      propertyPath: allItemsCollectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 31755050959065653, guid: 64ade2d5ceacbd0418f97d20563ce59b, type: 3}
       propertyPath: allItemsCollectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
+      objectReference: {fileID: 2043952916}
+    - target: {fileID: 31755050959065653, guid: 64ade2d5ceacbd0418f97d20563ce59b, type: 3}
+      propertyPath: allItemsCollectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 31755050959065653, guid: 64ade2d5ceacbd0418f97d20563ce59b, type: 3}
+      propertyPath: allItemsCollectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.Animator, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 31755050959065653, guid: 64ade2d5ceacbd0418f97d20563ce59b, type: 3}
+      propertyPath: allItemsCollectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Start
       objectReference: {fileID: 0}
     - target: {fileID: 409482660113031720, guid: 64ade2d5ceacbd0418f97d20563ce59b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -81659,7 +81768,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8265337976937784218, guid: 77035479302766c46ac2d0bdef896831, type: 3}
       propertyPath: timeOfDay
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8265337976937784218, guid: 77035479302766c46ac2d0bdef896831, type: 3}
       propertyPath: timeScale
@@ -81671,7 +81780,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8265337976937784218, guid: 77035479302766c46ac2d0bdef896831, type: 3}
       propertyPath: nightExposure
-      value: 0.1
+      value: 0.154
       objectReference: {fileID: 0}
     - target: {fileID: 8265337976937784218, guid: 77035479302766c46ac2d0bdef896831, type: 3}
       propertyPath: skyboxMaterial
