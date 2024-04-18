@@ -17,11 +17,6 @@ MonoBehaviour:
 
     Go and find the block that matches this pad.
 
-    Press
-    X -->'
-  - 'Objects Heighlighted yellow to pick up:
-
-    PC - E
-
-    Controller - Y'
+    Objects
+    Heighlighted yellow can be pick up'
   responses: []

@@ -196,7 +196,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -4.2064934, y: 1.67, z: 26.33}
-  m_LocalScale: {x: 1.6983, y: 0.1482582, z: 1.6983001}
+  m_LocalScale: {x: 2.368124, y: 0.20673251, z: 2.3681245}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7759495892285680773}
@@ -299,6 +299,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 9b92b49c9897ead468cbc2e6f0cc0a21, type: 2}
+        m_TargetAssemblyTypeName: Scripts.Data.IntData, Assembly-CSharp
+        m_MethodName: UpdateValue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  triggerStayEvent:
+    m_PersistentCalls:
+      m_Calls: []
   coin:
     serializedVersion: 2
     m_Bits: 128

@@ -9,14 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 339d107e6dd75814098f263d6b4d372b, type: 3}
-  m_Name: TutorialDialoge
+  m_Script: {fileID: 11500000, guid: 0364660d3dbfad04d9f0900d394e3d52, type: 3}
+  m_Name: HighScoreAction
   m_EditorClassIdentifier: 
-  dialogue:
-  - 'To Jump
-
-    PC- press Space bar, Controller- Press X
-
-    Collect coins to
-    buy upgrads at wizard tower'
-  responses: []
+  spriteObj: {fileID: 0}
+  meshObj: {fileID: 0}
+  meshObj1: {fileID: 0}
+  response:
+    m_PersistentCalls:
+      m_Calls: []
