@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
         jumpControl.action.Enable();
         attackControl.action.Enable();
         interactControl.action.Enable();
-        pickupControl.action.Enable();
+        //pickupControl.action.Enable();
     }
 
     private void OnDisable()
@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
         jumpControl.action.Disable();
         attackControl.action.Disable();
         interactControl.action.Disable();
-        pickupControl.action.Disable();
+        //pickupControl.action.Disable();
     }
 
     private void Start()

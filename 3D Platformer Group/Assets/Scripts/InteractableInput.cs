@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 public class InteractableInput : MonoBehaviour, IInteractable
 {
-    public UnityEvent enterEvent, exitEvent, interactEvent;
+    public UnityEvent enterEvent,stayEvent, exitEvent, interactEvent;
     
     private void OnTriggerEnter(Collider other)
     {
@@ -11,6 +11,15 @@ public class InteractableInput : MonoBehaviour, IInteractable
         {   
             playerController.Interactable = this;
             enterEvent.Invoke();
+        }
+    }
+    
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player") && other.TryGetComponent(out PlayerController playerController))
+        {
+            playerController.Interactable = this;
+            stayEvent.Invoke();
         }
     }
 

@@ -19,4 +19,12 @@ MonoBehaviour:
 
     Collect coins to
     buy upgrads at wizard tower'
-  responses: []
+  - 'To Jump
+
+    PC- press Space bar, Controller- Press X
+
+    Collect coins to
+    buy upgrads at wizard tower'
+  responses:
+  - responseText: 
+    dialogueData: {fileID: 0}
