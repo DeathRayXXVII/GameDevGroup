@@ -1949,6 +1949,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 477234726}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   runEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -2206,6 +2218,11 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!82 &477234726 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3275529812179257133, guid: 783fe81786f1f3f4a89f08cec17d3e3d, type: 3}
+  m_PrefabInstance: {fileID: 1427326106}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &480205804
 GameObject:
   m_ObjectHideFlags: 0
@@ -5677,7 +5694,6 @@ GameObject:
   - component: {fileID: 975292743}
   - component: {fileID: 975292742}
   - component: {fileID: 975292741}
-  - component: {fileID: 975292740}
   m_Layer: 5
   m_Name: OptionsPannel
   m_TagString: Untagged
@@ -5712,20 +5728,6 @@ RectTransform:
   m_AnchoredPosition: {x: 2217, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &975292740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 975292738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba59d1dc0862227488b60a84b681673f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: ee6c06147efc6e144a2612c90e15227e, type: 2}
-  resolutionDropdown: {fileID: 1838090831}
 --- !u!114 &975292741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7293,7 +7295,6 @@ GameObject:
   - component: {fileID: 1214566573}
   - component: {fileID: 1214566572}
   - component: {fileID: 1214566570}
-  - component: {fileID: 1214566571}
   m_Layer: 5
   m_Name: StatesPannel
   m_TagString: Untagged
@@ -7347,20 +7348,6 @@ MonoBehaviour:
       m_Calls: []
   inputEnabled: 0
   firstSelectedButton: {fileID: 1538809008}
---- !u!114 &1214566571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1214566568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba59d1dc0862227488b60a84b681673f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: ee6c06147efc6e144a2612c90e15227e, type: 2}
-  resolutionDropdown: {fileID: 0}
 --- !u!114 &1214566572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8284,6 +8271,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1421571432}
   m_CullTransparentMesh: 1
+--- !u!1001 &1427326106
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3521581605095446673, guid: 783fe81786f1f3f4a89f08cec17d3e3d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 219.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 3521581605095446673, guid: 783fe81786f1f3f4a89f08cec17d3e3d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 21.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 3521581605095446673, guid: 783fe81786f1f3f4a89f08cec17d3e3d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -31.869999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3521581605095446673, guid: 783fe81786f1f3f4a89f08cec17d3e3d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3521581605095446673, guid: 783fe81786f1f3f4a89f08cec17d3e3d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3521581605095446673, guid: 783fe81786f1f3f4a89f08cec17d3e3d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3521581605095446673, guid: 783fe81786f1f3f4a89f08cec17d3e3d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3521581605095446673, guid: 783fe81786f1f3f4a89f08cec17d3e3d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3521581605095446673, guid: 783fe81786f1f3f4a89f08cec17d3e3d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3521581605095446673, guid: 783fe81786f1f3f4a89f08cec17d3e3d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5083734486166973010, guid: 783fe81786f1f3f4a89f08cec17d3e3d, type: 3}
+      propertyPath: m_Name
+      value: MusicManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 783fe81786f1f3f4a89f08cec17d3e3d, type: 3}
 --- !u!1 &1454965100
 GameObject:
   m_ObjectHideFlags: 0
@@ -8763,7 +8807,6 @@ GameObject:
   - component: {fileID: 1528301676}
   - component: {fileID: 1528301675}
   - component: {fileID: 1528301673}
-  - component: {fileID: 1528301674}
   m_Layer: 5
   m_Name: CreditsPannel
   m_TagString: Untagged
@@ -8816,20 +8859,6 @@ MonoBehaviour:
       m_Calls: []
   inputEnabled: 0
   firstSelectedButton: {fileID: 1106893380}
---- !u!114 &1528301674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1528301671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba59d1dc0862227488b60a84b681673f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: ee6c06147efc6e144a2612c90e15227e, type: 2}
-  resolutionDropdown: {fileID: 0}
 --- !u!114 &1528301675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10829,7 +10858,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -12048,7 +12077,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: -Version- 0.9.2
+  m_text: '-Version: 0.9.5-'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -12669,3 +12698,4 @@ SceneRoots:
   - {fileID: 1588989420}
   - {fileID: 5140771888848292142}
   - {fileID: 1745529293}
+  - {fileID: 1427326106}

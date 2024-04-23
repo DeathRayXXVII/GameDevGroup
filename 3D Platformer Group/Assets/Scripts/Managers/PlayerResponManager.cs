@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using Scripts.Data;
 using UnityEngine;
 using UnityEngine.Events;
@@ -13,7 +11,7 @@ public class PlayerResponManager : MonoBehaviour
     [Header ("Respawn")]
     public vector3Data spawnPosition;
     public vector3Data respawnPosition;
-    public vector3Data checkpointPosition;
+    public GameObjectData checkpointPosition;
     public CharacterController cc;
     public GameObject playerOj;
     public float respawnDelay;

@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abb68203e943d484c832e100fdf8878f, type: 3}
-  m_Name: StartPositionCheckData
+  m_Script: {fileID: 11500000, guid: 339d107e6dd75814098f263d6b4d372b, type: 3}
+  m_Name: CheckpointInfo
   m_EditorClassIdentifier: 
-  value: 1
+  dialogue:
+  - This are your checkpoints!
+  responses: []
