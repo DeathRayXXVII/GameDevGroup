@@ -3,23 +3,28 @@ using UnityEngine.Events;
 
 public class InteractableInput : MonoBehaviour, IInteractable
 {
-    public UnityEvent enterEvent,stayEvent, exitEvent, interactEvent;
-    
+    public UnityEvent enterEvent, stayEvent, exitEvent, interactEvent;
+    private bool isExiting;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && other.TryGetComponent(out PlayerController playerController))
-        {   
+        {
             playerController.Interactable = this;
             enterEvent.Invoke();
+            isExiting = false;
         }
     }
-    
+
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player") && other.TryGetComponent(out PlayerController playerController))
         {
             playerController.Interactable = this;
-            stayEvent.Invoke();
+            if (!isExiting)
+            {
+                stayEvent.Invoke();
+            }
         }
     }
 
@@ -29,9 +34,10 @@ public class InteractableInput : MonoBehaviour, IInteractable
         {
             playerController.Interactable = null;
             exitEvent.Invoke();
+            isExiting = true;
         }
     }
-    
+
     public void Interact(PlayerController playerController)
     {
         interactEvent.Invoke();
