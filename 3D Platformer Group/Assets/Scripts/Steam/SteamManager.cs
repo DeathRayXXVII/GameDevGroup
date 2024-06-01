@@ -4,6 +4,7 @@ using Steamworks;
 
 public class SteamManager : MonoBehaviour
 {
+    
     private void Awake()
     {
         try

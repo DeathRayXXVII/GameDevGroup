@@ -498,6 +498,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8531998080094265592, guid: 11347d6a25406174a9e96f499cf563a4, type: 3}
+        m_TargetAssemblyTypeName: Achievements, Assembly-CSharp
+        m_MethodName: IsAchievementUnlocked
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ACH_DOUBLEJUMP
+          m_BoolArgument: 0
+        m_CallState: 2
   noPurchaseEvent:
     m_PersistentCalls:
       m_Calls:

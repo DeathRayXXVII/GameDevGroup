@@ -273,6 +273,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "SoftwareHome",
+                    "type": "Button",
+                    "id": "eaf19338-2e1d-40aa-be7a-02654bce3ef5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -658,6 +667,17 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Run",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7841a37e-0d1c-40af-8666-fda7e730202f",
+                    "path": "<Gamepad>/systemButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "SoftwareHome",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

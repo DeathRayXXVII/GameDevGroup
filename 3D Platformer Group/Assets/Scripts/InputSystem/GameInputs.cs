@@ -295,6 +295,15 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SoftwareHome"",
+                    ""type"": ""Button"",
+                    ""id"": ""eaf19338-2e1d-40aa-be7a-02654bce3ef5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -680,6 +689,17 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""Run"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7841a37e-0d1c-40af-8666-fda7e730202f"",
+                    ""path"": ""<Gamepad>/systemButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""SoftwareHome"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1301,6 +1321,7 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
         m_Player_Pickup = m_Player.FindAction("Pickup", throwIfNotFound: true);
         m_Player_Grab = m_Player.FindAction("Grab", throwIfNotFound: true);
         m_Player_ActivateInteract = m_Player.FindAction("Activate/Interact", throwIfNotFound: true);
+        m_Player_SoftwareHome = m_Player.FindAction("SoftwareHome", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1546,6 +1567,7 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Pickup;
     private readonly InputAction m_Player_Grab;
     private readonly InputAction m_Player_ActivateInteract;
+    private readonly InputAction m_Player_SoftwareHome;
     public struct PlayerActions
     {
         private @GameInputs m_Wrapper;
@@ -1559,6 +1581,7 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
         public InputAction @Pickup => m_Wrapper.m_Player_Pickup;
         public InputAction @Grab => m_Wrapper.m_Player_Grab;
         public InputAction @ActivateInteract => m_Wrapper.m_Player_ActivateInteract;
+        public InputAction @SoftwareHome => m_Wrapper.m_Player_SoftwareHome;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1595,6 +1618,9 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
             @ActivateInteract.started += instance.OnActivateInteract;
             @ActivateInteract.performed += instance.OnActivateInteract;
             @ActivateInteract.canceled += instance.OnActivateInteract;
+            @SoftwareHome.started += instance.OnSoftwareHome;
+            @SoftwareHome.performed += instance.OnSoftwareHome;
+            @SoftwareHome.canceled += instance.OnSoftwareHome;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -1626,6 +1652,9 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
             @ActivateInteract.started -= instance.OnActivateInteract;
             @ActivateInteract.performed -= instance.OnActivateInteract;
             @ActivateInteract.canceled -= instance.OnActivateInteract;
+            @SoftwareHome.started -= instance.OnSoftwareHome;
+            @SoftwareHome.performed -= instance.OnSoftwareHome;
+            @SoftwareHome.canceled -= instance.OnSoftwareHome;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -1849,6 +1878,7 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
         void OnPickup(InputAction.CallbackContext context);
         void OnGrab(InputAction.CallbackContext context);
         void OnActivateInteract(InputAction.CallbackContext context);
+        void OnSoftwareHome(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
