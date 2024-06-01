@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: 6479927742931807927}
   - component: {fileID: 856728019402179368}
   - component: {fileID: 8022177457634594298}
+  - component: {fileID: 2889944266159187292}
   m_Layer: 7
   m_Name: CoffeeCoin
   m_TagString: Untagged
@@ -311,10 +312,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: e07fc6a12bc1df94bac6e7a6e443850b, type: 2}
-        m_TargetAssemblyTypeName: Scripts.Data.IntData, Assembly-CSharp
+      - m_Target: {fileID: 2889944266159187292}
+        m_TargetAssemblyTypeName: CompareEvent, Assembly-CSharp
         m_MethodName: CompareValue
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -364,3 +365,32 @@ MonoBehaviour:
   rotateY: 0
   rotateZ: 1
   obj: {fileID: 0}
+--- !u!114 &2889944266159187292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8981718649943965736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4a21c4e9fcd3cb4bb167e467b367421, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intData: {fileID: 11400000, guid: e07fc6a12bc1df94bac6e7a6e443850b, type: 2}
+  num: 150
+  compareTrueEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Achievements, Assembly-CSharp
+        m_MethodName: IsAchievementUnlocked
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ACH_COIN
+          m_BoolArgument: 0
+        m_CallState: 2

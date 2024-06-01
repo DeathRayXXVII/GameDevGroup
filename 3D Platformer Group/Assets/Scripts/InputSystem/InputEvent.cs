@@ -37,7 +37,6 @@ public class InputEvent : MonoBehaviour
         }
         if (input.action.triggered)
         {
-            Debug.LogError("Input Triggered");
             if (isPressed)
             {
                 firstEvent.Invoke();
