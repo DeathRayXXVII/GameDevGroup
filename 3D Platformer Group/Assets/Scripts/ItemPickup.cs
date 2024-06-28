@@ -87,23 +87,25 @@ public class ItemPickup : MonoBehaviour
         if (obj.GetComponent<Rigidbody>())
         {
             item = obj;
-            //item.transform.parent = hand;
+            item.transform.parent = hand;
             itemRb = obj.GetComponent<Rigidbody>();
             itemRb.useGravity = false;
             itemRb.drag = 10;
             itemRb.constraints = RigidbodyConstraints.FreezeRotation;
-            //itemRb.transform.parent = hand;
-            //item.transform.position = hand.position;
+            itemRb.transform.parent = hand;
+            item.transform.position = hand.position;
+            item.transform.GetChild(0).gameObject.SetActive(false);
         }
     }
 
     private void DropObject()
     {
-        //item.transform.parent = null;
+        item.transform.GetChild(0).gameObject.SetActive(true);
+        item.transform.parent = null;
         itemRb.useGravity = true;
         itemRb.drag = 1;
         itemRb.constraints = RigidbodyConstraints.None;
-        //itemRb.transform.parent = null;
+        itemRb.transform.parent = null;
         item = null;
         itemRb = null;
     }
